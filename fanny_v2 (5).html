@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fanny Defoort — Psychopraticienne EMDR-DSA · Bagnères-de-Bigorre</title>
+  <meta name="description" content="Fanny Defoort, psychopraticienne EMDR-DSA à Bagnères-de-Bigorre. Désensibilisation des traumas, Breathwork, Art-thérapie. Enfants et adultes.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fannydefoort.fr/">
+  <meta property="og:title" content="Fanny Defoort — Psychopraticienne EMDR">
+  <meta property="og:description" content="Désensibilisation des traumas, Breathwork, Art-thérapie. Cabinet à Bagnères-de-Bigorre.">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Fanny Defoort — Psychopraticienne EMDR",
+    "description": "Psychopraticienne EMDR-DSA. Désensibilisation des traumas, Breathwork, Art-thérapie. Enfants et adultes.",
+    "address": { "@type": "PostalAddress", "streetAddress": "À définir", "addressLocality": "Bagnères-de-Bigorre", "postalCode": "65200", "addressRegion": "Hautes-Pyrénées", "addressCountry": "FR" },
+    "url": "https://fannydefoort.fr"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --clay:    #C8A882;
+      --clay-dk: #9C7A52;
+      --sand:    #F2EAE0;
+      --sand-dk: #E8DDD0;
+      --fog:     #F8F5F0;
+      --moss:    #6A8566;
+      --moss-dk: #4E6B4A;
+      --ink:     #1F1A15;
+      --mid:     #6B6059;
+      --line:    rgba(200,168,130,.22);
+      --serif:   'Playfair Display', Georgia, serif;
+      --sans:    'DM Sans', system-ui, sans-serif;
+      --ease:    .4s cubic-bezier(.16,1,.3,1);
+    }
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--fog); color: var(--ink); line-height: 1.75; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; inset: 0 0 auto 0; z-index: 200;
+      height: 68px; display: flex; align-items: center;
+      background: rgba(248,245,240,.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      transition: box-shadow .3s;
+    }
+    nav.shadow { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
+    .nav-in { max-width: 1120px; margin: 0 auto; padding: 0 2rem; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; flex-direction: column; line-height: 1.1; }
+    .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 500; color: var(--moss-dk); }
+    .nav-title { font-size: .58rem; letter-spacing: .16em; text-transform: uppercase; color: var(--mid); margin-top: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .76rem; font-weight: 500; color: var(--mid); transition: color var(--ease); }
+    .nav-links a:hover { color: var(--moss-dk); }
+    .nav-rdv { background: var(--moss-dk); color: #fff !important; padding: .5rem 1.2rem; border-radius: 3px; font-size: .73rem !important; }
+    .nav-rdv:hover { background: var(--moss) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100svh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding-top: 68px;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: -5%;
+      background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920&q=85&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center 35%;
+      will-change: transform;
+    }
+    .hero-veil {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(120deg, rgba(20,15,10,.78) 0%, rgba(20,15,10,.42) 55%, rgba(20,15,10,.15) 100%),
+        linear-gradient(to top, rgba(20,15,10,.55) 0%, transparent 45%);
+    }
+    .hero-body {
+      position: relative;
+      z-index: 2;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 5rem 2rem 7rem;
+      width: 100%;
+    }
+    .hero-eye {
+      display: flex; align-items: center; gap: .75rem;
+      font-size: .62rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase;
+      color: rgba(255,255,255,.6); margin-bottom: 1.75rem;
+      opacity: 0; transform: translateY(16px);
+      animation: up .8s .2s cubic-bezier(.16,1,.3,1) forwards;
+    }
+    .hero-eye::before { content: ''; width: 24px; height: 1px; background: rgba(200,168,130,.6); }
+    .hero-h1 {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 6.5vw, 5.5rem);
+      font-weight: 400;
+      line-height: 1.06;
+      color: #fff;
+      margin-bottom: 1.75rem;
+      text-shadow: 0 2px 24px rgba(0,0,0,.3);
+      opacity: 0; transform: translateY(22px);
+      animation: up .9s .35s cubic-bezier(.16,1,.3,1) forwards;
+    }
+    .hero-h1 em { font-style: italic; color: rgba(210,185,155,.95); display: block; }
+    .hero-sub {
+      font-size: 1rem; color: rgba(255,255,255,.72);
+      max-width: 480px; line-height: 1.85;
+      margin-bottom: 2.5rem;
+      opacity: 0; transform: translateY(18px);
+      animation: up .9s .5s cubic-bezier(.16,1,.3,1) forwards;
+    }
+    .hero-btns {
+      display: flex; flex-wrap: wrap; gap: .85rem;
+      opacity: 0; transform: translateY(14px);
+      animation: up .9s .65s cubic-bezier(.16,1,.3,1) forwards;
+    }
+    .btn { display: inline-block; padding: .85rem 1.9rem; font-family: var(--sans); font-size: .78rem; font-weight: 500; letter-spacing: .04em; border-radius: 3px; border: none; cursor: pointer; transition: transform var(--ease), box-shadow var(--ease), background var(--ease); }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-glass { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.28); color: #fff; backdrop-filter: blur(4px); }
+    .btn-glass:hover { background: rgba(255,255,255,.2); }
+    .btn-outline-w { border: 1px solid rgba(255,255,255,.35); color: #fff; backdrop-filter: blur(4px); }
+    .btn-outline-w:hover { background: rgba(255,255,255,.1); }
+    .btn-moss { background: var(--moss-dk); color: #fff; }
+    .btn-moss:hover { background: var(--moss); box-shadow: 0 8px 24px rgba(78,107,74,.3); }
+    .btn-clay { background: var(--clay-dk); color: #fff; }
+    .btn-clay:hover { background: var(--clay); box-shadow: 0 8px 24px rgba(156,122,82,.3); }
+    @keyframes up {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── KEN BURNS ── */
+    @keyframes kenburns {
+      0%   { transform: scale(1)    translate(0, 0); }
+      33%  { transform: scale(1.06) translate(-1%, 0.5%); }
+      66%  { transform: scale(1.04) translate(1.2%, -0.8%); }
+      100% { transform: scale(1)    translate(0, 0); }
+    }
+    .hero-bg { animation: kenburns 28s ease-in-out infinite; transform-origin: center center; }
+
+    /* ── PAPER TEXTURE ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: .04;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 400px 400px;
+    }
+
+    /* ── ICÔNES SVG FINES ── */
+    .acc-icon {
+      width: 48px; height: 48px;
+      border-radius: 0;
+      background: none;
+      margin-bottom: 1.5rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .acc-icon svg { width: 36px; height: 36px; stroke: var(--moss-dk); fill: none; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; }
+    .acc-card.wide .acc-icon { width: 48px; height: 48px; }
+
+    /* ── TRAIT CRAYON ── */
+    .page-crayon {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: visible;
+    }
+    .main-wrap { position: relative; overflow: hidden; }
+    .crayon-path {
+      fill: none;
+      stroke: var(--moss);
+      stroke-width: 1.1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: .11;
+      filter: url(#sketch-filter);
+    }
+    /* Vague en bas du hero */
+    .hero-wave { position: absolute; bottom: -1px; left: 0; right: 0; pointer-events: none; }
+
+    /* Nom Fanny sur le hero */
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3.2vw, 2.8rem);
+      font-weight: 400;
+      color: rgba(255,255,255,.92);
+      letter-spacing: .08em;
+      margin-bottom: .6rem;
+      opacity: 0; transform: translateY(14px);
+      animation: up .7s .1s cubic-bezier(.16,1,.3,1) forwards;
+    }
+
+    /* Map contact */
+    .map-wrap iframe { width: 100%; height: 200px; border: 0; border-radius: 4px; display: block; margin-top: 1.5rem; }
+
+    /* ── HELPERS ── */
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 2rem; }
+    .lbl { font-size: .62rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--clay-dk); display: block; margin-bottom: 1rem; }
+    .h2 { font-family: var(--serif); font-size: clamp(2rem, 3.8vw, 3.2rem); font-weight: 400; line-height: 1.15; margin-bottom: 1.5rem; }
+    .h2 em { font-style: italic; color: var(--moss-dk); }
+    .h3 { font-family: var(--serif); font-size: clamp(1.6rem, 2.8vw, 2.4rem); font-weight: 400; line-height: 1.2; margin-bottom: 1.25rem; }
+    .h3 em { font-style: italic; }
+    .body-t { font-size: .9rem; color: var(--mid); line-height: 1.9; margin-bottom: 1.1rem; }
+    .bar { width: 36px; height: 2px; background: linear-gradient(90deg, var(--moss), var(--clay)); margin-bottom: 1.5rem; transition: width 1s var(--ease); }
+    .bar.wide { width: 60px; }
+
+    /* ── RÉVÉLER ── */
+    .r { opacity: 1; }
+    .js-ok .r { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease), filter .6s; filter: blur(1px); }
+    .js-ok .r.on { opacity: 1; transform: none; filter: none; }
+    .js-ok .r.d1 { transition-delay: .1s; }
+    .js-ok .r.d2 { transition-delay: .2s; }
+    .js-ok .r.d3 { transition-delay: .3s; }
+    .js-ok .r.sl { transform: translateX(-36px); }
+    .js-ok .r.sr { transform: translateX(36px); }
+    .js-ok .r.sl.on, .js-ok .r.sr.on { transform: none; }
+
+    /* ── SECTION EMDR ── */
+    #emdr { background: var(--fog); padding: 7rem 0; }
+    .emdr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .emdr-visual {
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      border-radius: 4px;
+      position: relative;
+    }
+    .emdr-visual img { width: 100%; height: 100%; object-fit: cover; }
+    .emdr-badge {
+      position: absolute;
+      bottom: 1.5rem; left: -1rem;
+      background: var(--moss-dk);
+      color: #fff;
+      padding: .65rem 1.25rem;
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .emdr-steps { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
+    .emdr-step { display: flex; gap: 1rem; align-items: flex-start; }
+    .step-n { width: 32px; height: 32px; border-radius: 50%; background: var(--sand-dk); border: 1.5px solid var(--moss); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: .9rem; color: var(--moss-dk); flex-shrink: 0; }
+    .step-body h4 { font-size: .8rem; font-weight: 600; margin-bottom: .2rem; padding-top: .35rem; }
+    .step-body p { font-size: .78rem; color: var(--mid); line-height: 1.55; }
+
+    /* ── ACCOMPAGNEMENTS ── */
+    #accompagnements { background: var(--sand); padding: 7rem 0; }
+    .acc-head { text-align: center; margin-bottom: 4rem; }
+    .acc-head .bar { margin: 1rem auto 0; }
+    .acc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .acc-card {
+      background: var(--fog);
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      padding: 2.25rem 1.75rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform var(--ease), box-shadow var(--ease);
+    }
+    .acc-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--moss), var(--clay));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform var(--ease);
+    }
+    .acc-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,.07); }
+    .acc-card:hover::after { transform: scaleX(1); }
+    .acc-icon { width: 52px; height: 52px; border-radius: 50%; background: var(--sand-dk); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; font-size: 1.5rem; }
+    .acc-card h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; margin-bottom: .75rem; }
+    .acc-card p { font-size: .82rem; color: var(--mid); line-height: 1.75; margin-bottom: 1rem; }
+    .acc-tag { font-size: .62rem; font-weight: 600; letter-spacing: .1em; color: var(--moss-dk); text-transform: uppercase; }
+    /* 4e carte pleine largeur */
+    .acc-card.wide { grid-column: span 3; display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start; }
+    .acc-card.wide .acc-icon { width: 64px; height: 64px; font-size: 1.8rem; }
+
+    /* ── ART-THERAPIE (mise en avant) ── */
+    #art { background: var(--ink); padding: 7rem 0; overflow: hidden; }
+    .art-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .art-inner .lbl { color: rgba(200,168,130,.7); }
+    .art-inner .h2 { color: #fff; }
+    .art-inner .h2 em { color: rgba(200,168,130,.9); }
+    .art-inner .bar { background: linear-gradient(90deg, var(--clay), var(--moss)); }
+    .art-inner .body-t { color: rgba(255,255,255,.6); }
+    .art-medias { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+    .art-tag {
+      font-size: .68rem; font-weight: 600; letter-spacing: .08em;
+      color: rgba(255,255,255,.75);
+      border: 1px solid rgba(200,168,130,.35);
+      background: rgba(200,168,130,.1);
+      padding: .35rem .85rem;
+      border-radius: 20px;
+    }
+    .art-visual { aspect-ratio: 1; border-radius: 4px; overflow: hidden; }
+    .art-visual img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.85) brightness(.9); transition: filter var(--ease); }
+    .art-inner:hover .art-visual img { filter: saturate(1) brightness(1); }
+    .art-quote {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: rgba(255,255,255,.55);
+      padding: 1.25rem 0 1.25rem 1.5rem;
+      border-left: 2px solid rgba(200,168,130,.4);
+      margin: 2rem 0;
+      line-height: 1.65;
+    }
+
+    /* ── QUI SUIS-JE ── */
+    #qui { background: var(--sand-dk); padding: 7rem 0; }
+    .qui-grid { display: grid; grid-template-columns: 2fr 3fr; gap: 5.5rem; align-items: start; }
+    .portrait-wrap {
+      position: sticky; top: 90px;
+    }
+    .portrait {
+      aspect-ratio: 4/3;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+    .portrait-caption { margin-top: .85rem; font-size: .65rem; color: var(--mid); text-align: center; font-style: italic; }
+    .timeline { margin-top: 2.5rem; }
+    .tl-item { display: grid; grid-template-columns: 80px 1fr; gap: .85rem; padding-bottom: 1.5rem; position: relative; }
+    .tl-item:not(:last-child)::before { content: ''; position: absolute; left: 37px; top: 28px; bottom: 0; width: 1px; background: var(--line); }
+    .tl-yr { font-family: var(--serif); font-size: 1rem; color: var(--clay-dk); line-height: 1; padding-top: .35rem; }
+    .tl-body h4 { font-size: .82rem; font-weight: 600; margin-bottom: .2rem; padding-top: .3rem; }
+    .tl-body p { font-size: .76rem; color: var(--mid); line-height: 1.5; }
+    .val-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+    .val-item { background: var(--fog); border: 1px solid var(--line); border-radius: 4px; padding: 1.1rem 1.25rem; }
+    .val-item h4 { font-size: .78rem; font-weight: 600; margin-bottom: .25rem; color: var(--moss-dk); }
+    .val-item p { font-size: .74rem; color: var(--mid); line-height: 1.5; }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--fog); padding: 7rem 0; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
+    .contact-infos { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
+    .c-info { display: flex; gap: 1rem; align-items: flex-start; }
+    .c-ico { width: 38px; height: 38px; border-radius: 50%; background: var(--sand-dk); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; }
+    .c-info-lbl { font-size: .58rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--mid); margin-bottom: .2rem; }
+    .c-info-val { font-size: .85rem; font-weight: 500; }
+    .form-box { background: #fff; border: 1px solid var(--line); border-radius: 5px; padding: 2.5rem; }
+    .form-box h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 400; margin-bottom: .35rem; }
+    .form-sub { font-size: .76rem; color: var(--mid); margin-bottom: 2rem; }
+    .fg { margin-bottom: 1.1rem; }
+    .fg label { display: block; font-size: .6rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--mid); margin-bottom: .4rem; }
+    .fg input, .fg select, .fg textarea {
+      width: 100%; padding: .75rem .95rem;
+      border: 1.5px solid var(--line);
+      border-radius: 3px;
+      background: var(--fog);
+      font-family: var(--sans); font-size: .84rem; color: var(--ink);
+      outline: none;
+      transition: border-color var(--ease);
+    }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--moss); }
+    .fg textarea { min-height: 96px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--ink); padding: 3rem 0 2rem; }
+    .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+    .f-name { font-family: var(--serif); font-size: 1.1rem; color: #fff; margin-bottom: .3rem; }
+    .f-sub { font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 1rem; }
+    .f-desc { font-size: .74rem; color: rgba(255,255,255,.4); line-height: 1.65; }
+    .fc h4 { font-size: .58rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: .85rem; }
+    .fc ul { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+    .fc ul a { font-size: .76rem; color: rgba(255,255,255,.5); transition: color var(--ease); }
+    .fc ul a:hover { color: #fff; }
+    .foot-btm { border-top: 1px solid rgba(255,255,255,.07); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; font-size: .62rem; color: rgba(255,255,255,.28); }
+
+    /* ── SCROLL TOP ── */
+    #scroll-top {
+      position: fixed; bottom: 2.5rem; right: 2rem;
+      z-index: 500; opacity: 0; transform: translateY(16px);
+      transition: opacity .4s, transform .4s;
+      background: none; border: none; cursor: pointer;
+      display: flex; flex-direction: column; align-items: center; gap: .5rem;
+    }
+    #scroll-top.visible { opacity: 1; transform: none; }
+    #scroll-top svg { filter: drop-shadow(0 2px 8px rgba(0,0,0,.2)); transition: transform var(--ease); }
+    #scroll-top:hover svg { transform: translateY(-5px) scale(1.07); }
+    .scroll-lbl { font-size: .48rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--moss-dk); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .emdr-grid, .art-inner, .qui-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .acc-grid { grid-template-columns: 1fr; }
+      .acc-card.wide { grid-column: 1; grid-template-columns: 1fr; }
+      .foot-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .foot-btm { flex-direction: column; gap: .5rem; text-align: center; }
+      .portrait-wrap { position: static; }
+      .val-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- SVG filter pour l'effet crayon -->
+<svg style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sketch-filter" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03 0.05" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-in">
+    <a href="#" class="nav-brand">
+      <span class="nav-name">Fanny Defoort</span>
+      <span class="nav-title">Psychopraticienne EMDR-DSA &amp; Breathwork · Bagnères-de-Bigorre</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#emdr">L'EMDR-DSA</a></li>
+      <li><a href="#accompagnements">Accompagnements</a></li>
+      <li><a href="#qui">Qui suis-je</a></li>
+      <li><a href="#contact" class="btn nav-rdv">Prendre RDV</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="main-wrap">
+<svg class="page-crayon" id="page-crayon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+  <path id="crayon-path-1" class="crayon-path" d=""/>
+  <path id="crayon-path-2" class="crayon-path" d="" opacity=".07"/>
+</svg>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-veil"></div>
+  <div class="hero-body">
+    <div class="hero-name">Fanny Defoort</div>
+    <div class="hero-eye">
+      <span>Psychopraticienne EMDR-DSA · Bagnères-de-Bigorre</span>
+    </div>
+    <h1 class="hero-h1">
+      Traverser,<br>
+      <em>transformer,<br>s'ancrer.</em>
+    </h1>
+    <p class="hero-sub">
+      À Bagnères-de-Bigorre, j'accompagne enfants et adultes
+      dans la désensibilisation des traumas, le Breathwork et l'Art-thérapie.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-glass">Prendre rendez-vous</a>
+      <a href="#emdr" class="btn btn-outline-w">Découvrir l'EMDR-DSA →</a>
+    </div>
+  </div>
+  <svg class="hero-wave" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,80 L0,48 Q240,0 480,32 Q720,64 960,22 Q1200,-18 1440,30 L1440,80Z" fill="#F8F5F0"/>
+  </svg>
+</section>
+
+<!-- QU'EST-CE QUE L'EMDR -->
+<section id="emdr">
+  <div class="wrap">
+    <div class="emdr-grid">
+      <div class="emdr-visual r sl">
+        <img src="Art_De_Papillon_Pastel.webp" alt="Peinture pastel — papillons aquarelle">
+        <span class="emdr-badge">EMDR · DSA</span>
+      </div>
+      <div>
+        <span class="lbl r">Comprendre</span>
+        <h2 class="h2 r d1">Qu'est-ce que<br><em>l'EMDR ?</em></h2>
+        <div class="bar r d2"></div>
+        <p class="body-t r d2">L'EMDR — <em>Eye Movement Desensitization and Reprocessing</em> — est une approche thérapeutique développée dans les années 1980 pour traiter les traumas et les expériences émotionnellement douloureuses non digérées.</p>
+        <p class="body-t r d2">En utilisant des stimulations bilatérales alternées (mouvements oculaires, sons ou tapotements), l'EMDR permet au cerveau de retraiter les souvenirs figés et de libérer leur charge émotionnelle. Ce qui était bloqué se remet en mouvement.</p>
+        <p class="body-t r d2">La méthode DSA — Désensibilisation des Stress et traumas Associés — en est une application élargie, accessible même pour les traumas dits de « petite t » : situations d'humiliation, de rejet, de honte, d'insécurité répétée.</p>
+        <div class="emdr-steps r d3">
+          <div class="emdr-step">
+            <div class="step-n">1</div>
+            <div class="step-body">
+              <h4>Évaluation &amp; préparation</h4>
+              <p>Comprendre ce qui est venu se loger, créer la sécurité intérieure.</p>
+            </div>
+          </div>
+          <div class="emdr-step">
+            <div class="step-n">2</div>
+            <div class="step-body">
+              <h4>Désensibilisation</h4>
+              <p>Stimulations bilatérales pour dénouer la charge émotionnelle du souvenir.</p>
+            </div>
+          </div>
+          <div class="emdr-step">
+            <div class="step-n">3</div>
+            <div class="step-body">
+              <h4>Installation &amp; ancrage</h4>
+              <p>Renforcer la ressource, laisser s'installer la nouvelle perspective.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCOMPAGNEMENTS -->
+<section id="accompagnements">
+  <div class="wrap">
+    <div class="acc-head r">
+      <span class="lbl">Ce que je propose</span>
+      <h2 class="h2">Mes <em>accompagnements</em></h2>
+      <div class="bar"></div>
+      <p class="body-t" style="max-width:540px;margin:0 auto">Des approches complémentaires — thérapeutiques, corporelles et créatives — pour un travail qui touche l'être entier.</p>
+    </div>
+    <div class="acc-grid">
+
+      <div class="acc-card r">
+        <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 4C9 4 7 6 7 8.5c0 1.2.5 2.2 1.3 3M12 4c3 0 5 2 5 4.5 0 1.2-.5 2.2-1.3 3M12 4v16M8.3 11.5C7 12.5 6 14 6 15.5 6 18 8 20 10.5 20M15.7 11.5c1.3 1 2.3 2.5 2.3 4 0 2.5-2 4.5-4.5 4.5"/></svg></div>
+        <h3>EMDR-DSA</h3>
+        <p>Désensibilisation des traumas et des stress associés. Une approche validée scientifiquement pour retraiter ce qui est resté figé — chocs, répétitions douloureuses, blessures relationnelles.</p>
+        <span class="acc-tag">Enfants · Adultes · Cabinet 65</span>
+      </div>
+
+      <div class="acc-card r d1">
+        <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 20V4M8 8c-2-2-5-1-5 2s3 4 5 2M16 8c2-2 5-1 5 2s-3 4-5 2M8 16c-2 2-5 1-5-2M16 16c2 2 5 1 5-2"/></svg></div>
+        <h3>Breathwork</h3>
+        <p>La respiration consciente comme outil de libération. En groupe ou en individuel, le Breathwork ouvre un espace de lâcher-prise profond, d'accès aux émotions et de transformation sans passer par le mental.</p>
+        <span class="acc-tag">Groupe · Individuel · Présentiel</span>
+      </div>
+
+      <div class="acc-card r d2">
+        <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 21C12 21 4 14.5 4 9a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 5.5-8 12-8 12z"/><path d="M12 8v4M12 16h.01" stroke-width="1.5"/></svg></div>
+        <h3>Hypnose</h3>
+        <p>Utilisée comme outil d'accès aux ressources profondes et de reconfiguration des schémas inconscients. Complémentaire à l'EMDR pour certains accompagnements.</p>
+        <span class="acc-tag">Individuel · Sur demande</span>
+      </div>
+
+      <div class="acc-card wide r d1">
+        <div>
+          <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 19c-4.4 0-8-3.1-8-7 0-3.9 3.6-7 8-7 4.4 0 7 2.2 7 5 0 2-1.3 3-3 3h-1.5c-.8 0-1.5.7-1.5 1.5S13.7 16 14.5 16c.9 0 1.5.6 1.5 1.5C16 18.3 14.2 19 12 19z"/><circle cx="8.5" cy="11.5" r="1"/><circle cx="11" cy="8.5" r="1"/><circle cx="14" cy="9" r="1"/></svg></div>
+          <h3>Art-thérapie</h3>
+          <span class="acc-tag" style="margin-top:.5rem;display:block">Médias manuels · Ancrage · Intégration</span>
+        </div>
+        <div>
+          <p>L'art-thérapie vient compléter le travail thérapeutique par la création. Après avoir traversé quelque chose en séance, la main, le corps et la matière deviennent des relais d'intégration.</p>
+          <p style="font-size:.82rem;color:var(--mid);line-height:1.75">Dessiner, peindre, modeler l'argile, manipuler des marionnettes — ce ne sont pas des exercices artistiques. Ce sont des passages. Ce qui a été compris dans la tête et ressenti dans le corps se grave dans la matière, s'ancre, se dépose. Un passage très profond.</p>
+          <div class="art-medias" style="margin-top:1rem">
+            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Dessin</span>
+            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Peinture</span>
+            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Argile</span>
+            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Marionnettes</span>
+            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Médias manuels</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ART-THÉRAPIE EN PROFONDEUR (section sombre) -->
+<section id="art">
+  <div class="wrap">
+    <div class="art-inner">
+      <div>
+        <span class="lbl r">L'art comme passage</span>
+        <h2 class="h2 r d1">Enraciner<br><em>ce qui a changé</em></h2>
+        <div class="bar r d2"></div>
+        <p class="body-t r d2">Le travail thérapeutique peut rester suspendu dans le mental si on ne lui donne pas un corps, une forme, une matière. L'art-thérapie n'est pas une illustration de ce qui a été dit — c'est un passage par lui-même.</p>
+        <div class="art-quote r d2">
+          "Ce qui a été transformé se grave dans la matière. Le corps tient ce que l'esprit a traversé."
+        </div>
+        <p class="body-t r d3">Dessiner, modeler, peindre — ces gestes simples activent d'autres voies neurologiques, touchent d'autres mémoires. Ils permettent à la transformation de s'ancrer vraiment, dans le corps, dans le réel.</p>
+        <div class="art-medias r d3">
+          <span class="art-tag">Dessin</span>
+          <span class="art-tag">Peinture</span>
+          <span class="art-tag">Argile</span>
+          <span class="art-tag">Marionnettes</span>
+          <span class="art-tag">Médias manuels</span>
+          <span class="art-tag">Enracinement</span>
+        </div>
+      </div>
+      <div class="art-visual r sr">
+        <img src="Peinture_pot_fanny.webp" alt="Art-thérapie — intégration par la création">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUI SUIS-JE -->
+<section id="qui">
+  <div class="wrap">
+    <div class="qui-grid">
+      <div class="portrait-wrap">
+        <div class="portrait r">
+          <img src="splendeurs-dautomne-22-x-30-cm.webp" alt="Splendeurs d'automne — aquarelle J. Williet">
+        </div>
+        <p class="portrait-caption">Hautes-Pyrénées — lieu d'ancrage</p>
+      </div>
+      <div>
+        <span class="lbl r">À propos</span>
+        <h2 class="h2 r d1">Qui <em>suis-je ?</em></h2>
+        <div class="bar r d2"></div>
+        <p class="body-t r d2">Avant d'être psychopraticienne, j'ai traversé le monde du théâtre, du clown et de la création collective — des espaces où le corps, l'émotion et le jeu apprennent à coexister. Ce parcours artistique a façonné ma façon d'accompagner : avec présence, douceur et une confiance profonde dans les ressources de chacun.</p>
+        <p class="body-t r d2">Ma pratique intègre différentes formes d'accompagnement — thérapeutiques, corporelles et créatives — parce que je crois qu'une transformation profonde passe par plusieurs portes à la fois.</p>
+
+        <div class="timeline r d2">
+          <div class="tl-item">
+            <span class="tl-yr">Théâtre</span>
+            <div class="tl-body">
+              <h4>École Actéon · Compagnie Frêne-en-ciel</h4>
+              <p>Formation comédienne et metteure en scène à Arles. Clown, théâtre-forum, direction d'une compagnie d'art pluridisciplinaire.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-yr">Art-<br>thérapie</span>
+            <div class="tl-body">
+              <h4>Formation Art-thérapeute</h4>
+              <p>Pédagogies alternatives, communication non-violente. L'art et la création comme vecteurs de transformation et d'ancrage.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-yr">Psycho-<br>prat.</span>
+            <div class="tl-body">
+              <h4>Formation Psychopraticienne · EMDR-DSA</h4>
+              <p>Un an de formation intégrative (hypnose incluse), puis bifurcation naturelle vers la désensibilisation des traumas.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-yr">Breath-<br>work</span>
+            <div class="tl-body">
+              <h4>Breathwork Chamanique Healing</h4>
+              <p>Facilitatrice en respiration consciente. Sessions de groupe mensuelles co-animées — un souffle nouveau vers soi-même.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="val-grid r d3">
+          <div class="val-item">
+            <h4>Approche intégrative</h4>
+            <p>Plusieurs portes d'entrée pour toucher l'être entier — mental, corps, création.</p>
+          </div>
+          <div class="val-item">
+            <h4>Enfants &amp; adultes</h4>
+            <p>Un accompagnement adapté à chaque âge, chaque histoire, chaque rythme.</p>
+          </div>
+          <div class="val-item">
+            <h4>Sans appartenance requise</h4>
+            <p>Quelle que soit votre vécu ou votre parcours thérapeutique antérieur.</p>
+          </div>
+          <div class="val-item">
+            <h4>Cabinet à Bagnères</h4>
+            <p>Accompagnement en présentiel dans un cadre dédié, chaleureux et confidentiel.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="lbl r">Contact &amp; rendez-vous</span>
+        <h2 class="h2 r d1">Faire<br><em>le premier pas</em></h2>
+        <div class="bar r d2"></div>
+        <p class="body-t r d2">Que vous souhaitiez un accompagnement individuel, participer à une session de Breathwork ou simplement poser des questions, n'hésitez pas à me contacter. Je réponds sous 48h.</p>
+        <div class="contact-infos">
+          <div class="c-info r">
+            <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="var(--moss-dk)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 21c0 0-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+            <div>
+              <div class="c-info-lbl">Cabinet</div>
+              <div class="c-info-val">7 allée des Coustous<br>65200 Bagnères-de-Bigorre</div>
+            </div>
+          </div>
+          <div class="c-info r d1">
+            <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="var(--moss-dk)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.5 11.5 0 0 0 3.6.6 1 1 0 0 1 1 1V19a1 1 0 0 1-1 1A17 17 0 0 1 4 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1L6.6 10.8z"/></svg></div>
+            <div>
+              <div class="c-info-lbl">Téléphone</div>
+              <div class="c-info-val"><a href="tel:+33613183473">06 13 18 34 73</a></div>
+            </div>
+          </div>
+          <div class="c-info r d2">
+            <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="var(--moss-dk)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+            <div>
+              <div class="c-info-lbl">Email</div>
+              <div class="c-info-val" id="cmail-fanny"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Google Maps -->
+        <div class="map-wrap r d3">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23547.8!2d0.14869!3d43.05854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a865cd18f8d535%3A0x40819a5fd8a7a20!2sBagn%C3%A8res-de-Bigorre%2C%2065200!5e0!3m2!1sfr!2sfr!4v1680000000000!5m2!1sfr!2sfr"
+            width="100%" height="200"
+            style="border:0;border-radius:4px;display:block;margin-top:1.5rem;filter:saturate(.85) contrast(.95) brightness(1.05)"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Cabinet Fanny Defoort — Bagnères-de-Bigorre">
+          </iframe>
+        </div>
+      </div>
+      <div class="form-box r sr">
+        <h3>Envoyez-moi un message</h3>
+        <p class="form-sub">Je vous réponds personnellement sous 48h.</p>
+        <form name="contact-fanny" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact-fanny">
+          <div class="form-row">
+            <div class="fg"><label>Prénom *</label><input type="text" name="prenom" required placeholder="Votre prénom"></div>
+            <div class="fg"><label>Nom *</label><input type="text" name="nom" required placeholder="Votre nom"></div>
+          </div>
+          <div class="fg"><label>Email *</label><input type="email" name="email" required placeholder="votre@email.fr"></div>
+          <div class="fg"><label>Téléphone</label><input type="tel" name="telephone" placeholder="06 xx xx xx xx"></div>
+          <div class="fg">
+            <label>Objet</label>
+            <select name="sujet">
+              <option value="">-- Choisir --</option>
+              <option>Séance EMDR-DSA (adulte)</option>
+              <option>Séance EMDR-DSA (enfant)</option>
+              <option>Session Breathwork individuelle</option>
+              <option>Session Breathwork en groupe</option>
+              <option>Art-thérapie</option>
+              <option>Hypnose</option>
+              <option>Renseignements généraux</option>
+            </select>
+          </div>
+          <div class="fg"><label>Message *</label><textarea name="message" required placeholder="Décrivez brièvement ce qui vous amène…"></textarea></div>
+          <button type="submit" class="btn btn-moss" style="width:100%;margin-top:.5rem">Envoyer mon message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+</div><!-- /main-wrap -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="f-name">Fanny Defoort</div>
+        <div class="f-sub">Psychopraticienne EMDR-DSA · Bagnères-de-Bigorre</div>
+        <p class="f-desc">EMDR, Breathwork, Art-thérapie, Hypnose.<br>Enfants et adultes. Cabinet à Bagnères-de-Bigorre.</p>
+      </div>
+      <div class="fc">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#emdr">L'EMDR-DSA</a></li>
+          <li><a href="#accompagnements">Accompagnements</a></li>
+          <li><a href="#art">Art-thérapie</a></li>
+          <li><a href="#qui">Qui suis-je</a></li>
+          <li><a href="#contact">Contact &amp; RDV</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Infos</h4>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+        <p style="margin-top:1rem;font-size:.65rem;color:rgba(255,255,255,.28);line-height:1.6">7 allée des Coustous<br>65200 Bagnères-de-Bigorre</p>
+      </div>
+    </div>
+    <div class="foot-btm">
+      <span>© 2026 Fanny Defoort — Tous droits réservés</span>
+      <span style="font-size:.55rem;opacity:.35">site par <a href="https://agencementklein.fr" style="color:inherit;text-decoration:underline;text-underline-offset:2px;" target="_blank" rel="noopener">Tom Klein</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- BOUTON SCROLL TOP -->
+<button id="scroll-top" aria-label="Revenir en haut">
+  <svg viewBox="0 0 52 64" fill="none" width="52" height="64" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="26" cy="32" r="24" fill="rgba(248,245,240,0.92)" stroke="rgba(106,133,102,0.3)" stroke-width="1.2"/>
+    <line x1="26" y1="46" x2="26" y2="22" stroke="#4E6B4A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M16,32 L26,18 L36,32" stroke="#4E6B4A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18,31 L26,20 L34,31 L26,27Z" fill="rgba(106,133,102,0.2)"/>
+    <path d="M19,47 C16,47 14,45 15,43 C16,41 18,42 18,44" stroke="rgba(106,133,102,0.45)" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <path d="M33,47 C36,47 38,45 37,43 C36,41 34,42 34,44" stroke="rgba(106,133,102,0.45)" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <circle cx="26" cy="48" r="1.4" fill="rgba(106,133,102,0.45)"/>
+  </svg>
+  <span class="scroll-lbl">Haut</span>
+</button>
+
+<script>
+  // JS ready
+  document.body.classList.add('js-ok');
+
+  // Nav shadow
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('shadow', window.scrollY > 20);
+  }, { passive: true });
+
+  // Reveal
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.r').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.r').forEach(el => el.classList.add('on'));
+  }
+
+  // Parallaxe hero
+  const heroBg = document.querySelector('.hero-bg');
+  window.addEventListener('scroll', () => {
+    if (heroBg && window.scrollY < window.innerHeight) {
+      heroBg.style.transform = 'translateY(' + (window.scrollY * 0.28) + 'px)';
+    }
+  }, { passive: true });
+
+  // Bar animation
+  const bars = document.querySelectorAll('.bar');
+  const barIo = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('wide'); barIo.unobserve(e.target); }
+    });
+  }, { threshold: 0.5 });
+  bars.forEach(b => barIo.observe(b));
+
+  // Scroll top
+  const scrollBtn = document.getElementById('scroll-top');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+  scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // Email anti-obfuscation
+  (function() {
+    var u = 'fanny.defoort', d = 'protonmail.com';
+    var el = document.getElementById('cmail-fanny');
+    if (el) {
+      var a = document.createElement('a');
+      a.href = 'mailto:' + u + '@' + d;
+      a.textContent = u + '@' + d;
+      a.style.cssText = 'font-size:.85rem;font-weight:500;text-decoration:underline;text-underline-offset:3px;';
+      el.appendChild(a);
+    }
+  })();
+
+  // Barre de progression scroll
+  var pb = document.createElement('div');
+  pb.style.cssText = 'position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,#4E6B4A,#C8A882);z-index:9999;width:0%;transition:width .1s linear;pointer-events:none;';
+  document.body.appendChild(pb);
+  window.addEventListener('scroll', function() {
+    var total = document.documentElement.scrollHeight - window.innerHeight;
+    pb.style.width = (window.scrollY / total * 100) + '%';
+  }, { passive: true });
+
+  // Traits crayon — arabesques douces
+  (function() {
+    var wrap = document.querySelector('.main-wrap');
+    var svg  = document.getElementById('page-crayon');
+    if (!svg || !wrap) return;
+
+    function buildPath() {
+      var h = wrap.scrollHeight;
+      var w = wrap.offsetWidth;
+      svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+      svg.style.height = h + 'px';
+
+      // Génère une arabesque : courbe sinusoïdale composée avec
+      // plusieurs fréquences et amplitudes, rendue en cubiques de Bézier
+      function arabesque(opts) {
+        var cx   = opts.cx   || w * 0.5;   // centre X
+        var amp1 = opts.amp1 || w * 0.14;  // amplitude principale
+        var amp2 = opts.amp2 || w * 0.05;  // amplitude secondaire (harmonique)
+        var freq1= opts.freq1|| 1.8;       // fréquences sur toute la hauteur
+        var freq2= opts.freq2|| 4.3;
+        var phase1=opts.phase1||0;
+        var phase2=opts.phase2||0;
+
+        var N = Math.ceil(h / 18); // un point tous les ~18px
+        var pts = [];
+        for (var i = 0; i <= N; i++) {
+          var t = i / N;
+          var y = t * h;
+          var x = cx
+            + Math.sin(t * Math.PI * 2 * freq1 + phase1) * amp1
+            + Math.sin(t * Math.PI * 2 * freq2 + phase2) * amp2;
+          x = Math.max(w * 0.04, Math.min(w * 0.96, x));
+          pts.push({ x: x, y: y });
+        }
+
+        // Convertit les points en courbes cubiques de Bézier lisses
+        // via la tangente catmull-rom → Bezier
+        var d = 'M ' + pts[0].x.toFixed(2) + ' ' + pts[0].y.toFixed(2);
+        for (var i = 1; i < pts.length - 1; i++) {
+          var p0 = pts[i - 1];
+          var p1 = pts[i];
+          var p2 = pts[i + 1];
+          var tension = 0.4;
+          var cp1x = p1.x - (p2.x - p0.x) * tension / 2;
+          var cp1y = p1.y - (p2.y - p0.y) * tension / 2;
+          var cp2x = p1.x + (p2.x - p0.x) * tension / 2;
+          var cp2y = p1.y + (p2.y - p0.y) * tension / 2;
+          d += ' C ' + cp1x.toFixed(2) + ' ' + cp1y.toFixed(2)
+               + ' ' + cp2x.toFixed(2) + ' ' + cp2y.toFixed(2)
+               + ' ' + p1.x.toFixed(2) + ' ' + p1.y.toFixed(2);
+        }
+        return d;
+      }
+
+      var p1 = document.getElementById('crayon-path-1');
+      var p2 = document.getElementById('crayon-path-2');
+
+      if (p1) p1.setAttribute('d', arabesque({
+        cx: w * 0.42,
+        amp1: w * 0.16,
+        amp2: w * 0.06,
+        freq1: 2.1,
+        freq2: 5.2,
+        phase1: 0.4,
+        phase2: 1.1
+      }));
+
+      if (p2) p2.setAttribute('d', arabesque({
+        cx: w * 0.58,
+        amp1: w * 0.13,
+        amp2: w * 0.04,
+        freq1: 1.6,
+        freq2: 3.9,
+        phase1: 1.7,
+        phase2: 2.8
+      }));
+    }
+
+    buildPath();
+    window.addEventListener('resize', buildPath, { passive: true });
+  })();
+</script>
+</body>
+</html>
