@@ -55,16 +55,51 @@
       border-bottom: 1px solid var(--line);
       transition: box-shadow .3s;
     }
-    nav.shadow { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
+    nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
     .nav-in { max-width: 1120px; margin: 0 auto; padding: 0 2rem; width: 100%; display: flex; align-items: center; justify-content: space-between; }
-    .nav-brand { display: flex; flex-direction: column; line-height: 1.1; }
-    .nav-name { font-family: var(--serif); font-size: 1.05rem; font-weight: 500; color: var(--moss-dk); }
-    .nav-title { font-size: .58rem; letter-spacing: .16em; text-transform: uppercase; color: var(--mid); margin-top: 2px; }
+    .nav-brand { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
+    .nav-brand-leaf { color: var(--moss); opacity: .7; flex-shrink: 0; }
+    .nav-name {
+      font-family: var(--serif);
+      font-size: 1.18rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--ink);
+      letter-spacing: .01em;
+    }
     .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: .76rem; font-weight: 500; color: var(--mid); transition: color var(--ease); }
+    .nav-links a { font-size: .76rem; font-weight: 500; color: var(--mid); transition: color .3s; }
     .nav-links a:hover { color: var(--moss-dk); }
-    .nav-rdv { background: var(--moss-dk); color: #fff !important; padding: .5rem 1.2rem; border-radius: 3px; font-size: .73rem !important; }
-    .nav-rdv:hover { background: var(--moss) !important; }
+
+    /* ── BOUTON FLOTTANT RDV ── */
+    #fab-rdv {
+      position: fixed;
+      right: 1.5rem;
+      bottom: 5.5rem;
+      z-index: 400;
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      background: var(--moss-dk);
+      color: #fff;
+      text-decoration: none;
+      padding: .75rem 1.2rem .75rem .95rem;
+      border-radius: 50px;
+      font-family: var(--sans);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .04em;
+      box-shadow: 0 4px 20px rgba(78,107,74,.35);
+      transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s, background .2s;
+      cursor: pointer;
+      border: none;
+    }
+    #fab-rdv:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 8px 28px rgba(78,107,74,.45);
+      background: var(--moss);
+    }
+    #fab-rdv svg { flex-shrink: 0; }
 
     /* ── HERO ── */
     .hero {
@@ -404,6 +439,7 @@
     /* ── MOBILE ── */
     @media (max-width: 900px) {
       .nav-links { display: none; }
+      .nav-in { grid-template-columns: 1fr; justify-items: center; }
       .emdr-grid, .art-inner, .qui-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .acc-grid { grid-template-columns: 1fr; }
       .acc-card.wide { grid-column: 1; grid-template-columns: 1fr; }
@@ -431,17 +467,25 @@
 <nav id="nav">
   <div class="nav-in">
     <a href="#" class="nav-brand">
+      <svg class="nav-brand-leaf" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12M12 12C12 7 7 4 3 5c0 5 3 9 9 7zM12 12c0-5 5-8 9-7 0 5-3 9-9 7z"/></svg>
       <span class="nav-name">Fanny Defoort</span>
-      <span class="nav-title">Psychopraticienne EMDR-DSA &amp; Breathwork · Bagnères-de-Bigorre</span>
     </a>
     <ul class="nav-links">
       <li><a href="#emdr">L'EMDR-DSA</a></li>
       <li><a href="#accompagnements">Accompagnements</a></li>
       <li><a href="#qui">Qui suis-je</a></li>
-      <li><a href="#contact" class="btn nav-rdv">Prendre RDV</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
+
+<!-- BOUTON FLOTTANT RDV -->
+<a href="#contact" id="fab-rdv" aria-label="Prendre rendez-vous">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+  </svg>
+  Prendre rendez-vous
+</a>
 
 <!-- HERO -->
 <div class="main-wrap">
@@ -805,10 +849,10 @@
   // JS ready
   document.body.classList.add('js-ok');
 
-  // Nav shadow
+  // Nav scroll
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('shadow', window.scrollY > 20);
+    nav.classList.toggle('scrolled', window.scrollY > 60);
   }, { passive: true });
 
   // Reveal
