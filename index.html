@@ -160,17 +160,8 @@
       opacity: 0; transform: translateY(18px);
       animation: up .9s .5s cubic-bezier(.16,1,.3,1) forwards;
     }
-    .hero-btns {
-      display: flex; flex-wrap: wrap; gap: .85rem;
-      opacity: 0; transform: translateY(14px);
-      animation: up .9s .65s cubic-bezier(.16,1,.3,1) forwards;
-    }
     .btn { display: inline-block; padding: .85rem 1.9rem; font-family: var(--sans); font-size: .78rem; font-weight: 500; letter-spacing: .04em; border-radius: 3px; border: none; cursor: pointer; transition: transform var(--ease), box-shadow var(--ease), background var(--ease); }
     .btn:hover { transform: translateY(-2px); }
-    .btn-glass { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.28); color: #fff; backdrop-filter: blur(4px); }
-    .btn-glass:hover { background: rgba(255,255,255,.2); }
-    .btn-outline-w { border: 1px solid rgba(255,255,255,.35); color: #fff; backdrop-filter: blur(4px); }
-    .btn-outline-w:hover { background: rgba(255,255,255,.1); }
     .btn-moss { background: var(--moss-dk); color: #fff; }
     .btn-moss:hover { background: var(--moss); box-shadow: 0 8px 24px rgba(78,107,74,.3); }
     .btn-clay { background: var(--clay-dk); color: #fff; }
@@ -329,6 +320,17 @@
     .acc-card.wide { grid-column: span 3; display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: start; }
     .acc-card.wide .acc-icon { width: 64px; height: 64px; font-size: 1.8rem; }
 
+    /* ── BREATHWORK & HYPNOSE ── */
+    #breathwork { background: var(--sand); padding: 7rem 0; }
+    #hypnose { background: var(--fog); padding: 7rem 0; }
+    .duo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .duo-visual { aspect-ratio: 4/5; overflow: hidden; border-radius: 4px; position: relative; }
+    .duo-visual img { width: 100%; height: 100%; object-fit: cover; }
+    .hyp-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; max-width: 920px; margin: 0 auto; }
+    .hyp-item { background: #fff; border: 1px solid var(--line); border-radius: 5px; padding: 1.6rem 1.5rem; }
+    .hyp-item h4 { font-size: .82rem; font-weight: 600; margin-bottom: .4rem; color: var(--moss-dk); }
+    .hyp-item p { font-size: .78rem; color: var(--mid); line-height: 1.65; }
+
     /* ── ART-THERAPIE (mise en avant) ── */
     #art { background: var(--ink); padding: 7rem 0; overflow: hidden; }
     .art-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
@@ -441,8 +443,8 @@
       .nav-links { display: none; }
       .nav-in { grid-template-columns: 1fr; justify-items: center; }
       .page-crayon { display: none; }
-      .emdr-grid, .art-inner, .qui-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .acc-grid { grid-template-columns: 1fr; }
+      .emdr-grid, .duo-grid, .art-inner, .qui-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .acc-grid, .hyp-points { grid-template-columns: 1fr; }
       .acc-card.wide { grid-column: 1; grid-template-columns: 1fr; }
       .foot-grid { grid-template-columns: 1fr; gap: 2rem; }
       .foot-btm { flex-direction: column; gap: .5rem; text-align: center; }
@@ -510,14 +512,65 @@
       À Bagnères-de-Bigorre, j'accompagne enfants et adultes
       dans la désensibilisation des traumas, le Breathwork et l'Art-thérapie.
     </p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn btn-glass">Prendre rendez-vous</a>
-      <a href="#emdr" class="btn btn-outline-w">Découvrir l'EMDR-DSA →</a>
-    </div>
   </div>
   <svg class="hero-wave" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,80 L0,48 Q240,0 480,32 Q720,64 960,22 Q1200,-18 1440,30 L1440,80Z" fill="#F8F5F0"/>
+    <path d="M0,80 L0,48 Q240,0 480,32 Q720,64 960,22 Q1200,-18 1440,30 L1440,80Z" fill="#F2EAE0"/>
   </svg>
+</section>
+
+<!-- ACCOMPAGNEMENTS -->
+<section id="accompagnements">
+  <div class="wrap">
+    <div class="acc-head r">
+      <span class="lbl">Ce que je propose</span>
+      <h2 class="h2">Mes <em>accompagnements</em></h2>
+      <div class="bar"></div>
+      <p class="body-t" style="max-width:540px;margin:0 auto">Des approches complémentaires — thérapeutiques, corporelles et créatives — pour un travail qui touche l'être entier.</p>
+    </div>
+    <div class="acc-grid">
+
+      <div class="acc-card r">
+        <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 4C9 4 7 6 7 8.5c0 1.2.5 2.2 1.3 3M12 4c3 0 5 2 5 4.5 0 1.2-.5 2.2-1.3 3M12 4v16M8.3 11.5C7 12.5 6 14 6 15.5 6 18 8 20 10.5 20M15.7 11.5c1.3 1 2.3 2.5 2.3 4 0 2.5-2 4.5-4.5 4.5"/></svg></div>
+        <h3>EMDR-DSA</h3>
+        <p>Désensibilisation des traumas et des stress associés. Une approche validée scientifiquement pour retraiter ce qui est resté figé — chocs, répétitions douloureuses, blessures relationnelles.</p>
+        <span class="acc-tag">Enfants · Adultes · Cabinet 65</span>
+      </div>
+
+      <div class="acc-card r d1">
+        <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 20V4M8 8c-2-2-5-1-5 2s3 4 5 2M16 8c2-2 5-1 5 2s-3 4-5 2M8 16c-2 2-5 1-5-2M16 16c2 2 5 1 5-2"/></svg></div>
+        <h3>Breathwork</h3>
+        <p>La respiration consciente comme outil de libération. En groupe ou en individuel, le Breathwork ouvre un espace de lâcher-prise profond, d'accès aux émotions et de transformation sans passer par le mental.</p>
+        <span class="acc-tag">Groupe · Individuel · Présentiel</span>
+      </div>
+
+      <div class="acc-card r d2">
+        <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 21C12 21 4 14.5 4 9a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 5.5-8 12-8 12z"/><path d="M12 8v4M12 16h.01" stroke-width="1.5"/></svg></div>
+        <h3>Hypnose</h3>
+        <p>Utilisée comme outil d'accès aux ressources profondes et de reconfiguration des schémas inconscients. Complémentaire à l'EMDR pour certains accompagnements.</p>
+        <span class="acc-tag">Individuel · Sur demande</span>
+      </div>
+
+      <div class="acc-card wide r d1">
+        <div>
+          <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 19c-4.4 0-8-3.1-8-7 0-3.9 3.6-7 8-7 4.4 0 7 2.2 7 5 0 2-1.3 3-3 3h-1.5c-.8 0-1.5.7-1.5 1.5S13.7 16 14.5 16c.9 0 1.5.6 1.5 1.5C16 18.3 14.2 19 12 19z"/><circle cx="8.5" cy="11.5" r="1"/><circle cx="11" cy="8.5" r="1"/><circle cx="14" cy="9" r="1"/></svg></div>
+          <h3>Art-thérapie</h3>
+          <span class="acc-tag" style="margin-top:.5rem;display:block">Médias manuels · Ancrage · Intégration</span>
+        </div>
+        <div>
+          <p>L'art-thérapie peut venir compléter le travail thérapeutique par la création. Après avoir traversé quelque chose en séance, la main, le corps et la matière deviennent des relais d'intégration.</p>
+          <p style="font-size:.82rem;color:var(--mid);line-height:1.75">Dessiner, peindre, modeler l'argile, manipuler des marionnettes — ce ne sont pas des exercices artistiques. Ce sont des passages. Ce qui a été compris dans la tête et ressenti dans le corps se grave dans la matière, s'ancre, se dépose. Un passage très profond.</p>
+          <div class="art-medias" style="margin-top:1rem">
+            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Dessin</span>
+            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Peinture</span>
+            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Argile</span>
+            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Marionnettes</span>
+            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Médias manuels</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <!-- QU'EST-CE QUE L'EMDR -->
@@ -563,58 +616,56 @@
   </div>
 </section>
 
-<!-- ACCOMPAGNEMENTS -->
-<section id="accompagnements">
+<!-- BREATHWORK -->
+<section id="breathwork">
+  <div class="wrap">
+    <div class="duo-grid">
+      <div>
+        <span class="lbl r">Respiration consciente</span>
+        <h2 class="h2 r d1">Le <em>Breathwork</em></h2>
+        <div class="bar r d2"></div>
+        <p class="body-t r d2">Le Breathwork utilise la respiration consciente comme porte d'entrée vers ce que le mental ne sait pas atteindre. Le souffle, amplifié et soutenu, ouvre un espace de lâcher-prise profond où les émotions retenues peuvent enfin circuler.</p>
+        <p class="body-t r d2">Sans parole, sans analyse — c'est le corps qui fait le travail. Tensions accumulées, émotions figées, charges anciennes : la respiration vient les remettre en mouvement, à votre rythme.</p>
+        <p class="body-t r d3">Je facilite des sessions de groupe mensuelles co-animées — Breathwork Chamanique Healing — ainsi que des séances individuelles, en présentiel.</p>
+        <div class="art-medias r d3" style="margin-top:1.5rem">
+          <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--fog)">Groupe</span>
+          <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--fog)">Individuel</span>
+          <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--fog)">Présentiel</span>
+          <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--fog)">Sessions mensuelles</span>
+        </div>
+      </div>
+      <div class="duo-visual r sr">
+        <img src="splendeurs-dautomne-22-x-30-cm.webp" alt="Peinture — Splendeurs d'automne, 22 × 30 cm">
+        <span class="emdr-badge">Souffle · Lâcher-prise</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HYPNOSE -->
+<section id="hypnose">
   <div class="wrap">
     <div class="acc-head r">
-      <span class="lbl">Ce que je propose</span>
-      <h2 class="h2">Mes <em>accompagnements</em></h2>
+      <span class="lbl">Ressources profondes</span>
+      <h2 class="h2">L'<em>hypnose</em></h2>
       <div class="bar"></div>
-      <p class="body-t" style="max-width:540px;margin:0 auto">Des approches complémentaires — thérapeutiques, corporelles et créatives — pour un travail qui touche l'être entier.</p>
+      <p class="body-t" style="max-width:560px;margin:0 auto">L'hypnose ouvre un accès direct aux ressources profondes et permet de reconfigurer les schémas inconscients — ces automatismes qui rejouent les mêmes scénarios malgré nous.</p>
     </div>
-    <div class="acc-grid">
-
-      <div class="acc-card r">
-        <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 4C9 4 7 6 7 8.5c0 1.2.5 2.2 1.3 3M12 4c3 0 5 2 5 4.5 0 1.2-.5 2.2-1.3 3M12 4v16M8.3 11.5C7 12.5 6 14 6 15.5 6 18 8 20 10.5 20M15.7 11.5c1.3 1 2.3 2.5 2.3 4 0 2.5-2 4.5-4.5 4.5"/></svg></div>
-        <h3>EMDR-DSA</h3>
-        <p>Désensibilisation des traumas et des stress associés. Une approche validée scientifiquement pour retraiter ce qui est resté figé — chocs, répétitions douloureuses, blessures relationnelles.</p>
-        <span class="acc-tag">Enfants · Adultes · Cabinet 65</span>
+    <div class="hyp-points">
+      <div class="hyp-item r">
+        <h4>Accéder aux ressources</h4>
+        <p>Contourner le mental pour mobiliser ce qui, en vous, sait déjà apaiser, réparer, avancer.</p>
       </div>
-
-      <div class="acc-card r d1">
-        <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 20V4M8 8c-2-2-5-1-5 2s3 4 5 2M16 8c2-2 5-1 5 2s-3 4-5 2M8 16c-2 2-5 1-5-2M16 16c2 2 5 1 5-2"/></svg></div>
-        <h3>Breathwork</h3>
-        <p>La respiration consciente comme outil de libération. En groupe ou en individuel, le Breathwork ouvre un espace de lâcher-prise profond, d'accès aux émotions et de transformation sans passer par le mental.</p>
-        <span class="acc-tag">Groupe · Individuel · Présentiel</span>
+      <div class="hyp-item r d1">
+        <h4>Reconfigurer les schémas</h4>
+        <p>Travailler en douceur les automatismes inconscients pour ouvrir de nouveaux chemins.</p>
       </div>
-
-      <div class="acc-card r d2">
-        <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 21C12 21 4 14.5 4 9a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 5.5-8 12-8 12z"/><path d="M12 8v4M12 16h.01" stroke-width="1.5"/></svg></div>
-        <h3>Hypnose</h3>
-        <p>Utilisée comme outil d'accès aux ressources profondes et de reconfiguration des schémas inconscients. Complémentaire à l'EMDR pour certains accompagnements.</p>
-        <span class="acc-tag">Individuel · Sur demande</span>
+      <div class="hyp-item r d2">
+        <h4>En complément de l'EMDR</h4>
+        <p>Pour certains accompagnements, l'hypnose vient préparer ou approfondir le travail de désensibilisation.</p>
       </div>
-
-      <div class="acc-card wide r d1">
-        <div>
-          <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 19c-4.4 0-8-3.1-8-7 0-3.9 3.6-7 8-7 4.4 0 7 2.2 7 5 0 2-1.3 3-3 3h-1.5c-.8 0-1.5.7-1.5 1.5S13.7 16 14.5 16c.9 0 1.5.6 1.5 1.5C16 18.3 14.2 19 12 19z"/><circle cx="8.5" cy="11.5" r="1"/><circle cx="11" cy="8.5" r="1"/><circle cx="14" cy="9" r="1"/></svg></div>
-          <h3>Art-thérapie</h3>
-          <span class="acc-tag" style="margin-top:.5rem;display:block">Médias manuels · Ancrage · Intégration</span>
-        </div>
-        <div>
-          <p>L'art-thérapie vient compléter le travail thérapeutique par la création. Après avoir traversé quelque chose en séance, la main, le corps et la matière deviennent des relais d'intégration.</p>
-          <p style="font-size:.82rem;color:var(--mid);line-height:1.75">Dessiner, peindre, modeler l'argile, manipuler des marionnettes — ce ne sont pas des exercices artistiques. Ce sont des passages. Ce qui a été compris dans la tête et ressenti dans le corps se grave dans la matière, s'ancre, se dépose. Un passage très profond.</p>
-          <div class="art-medias" style="margin-top:1rem">
-            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Dessin</span>
-            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Peinture</span>
-            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Argile</span>
-            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Marionnettes</span>
-            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Médias manuels</span>
-          </div>
-        </div>
-      </div>
-
     </div>
+    <p class="acc-tag r d3" style="display:block;text-align:center;margin-top:2.5rem">Individuel · Sur demande</p>
   </div>
 </section>
 
@@ -623,7 +674,7 @@
   <div class="wrap">
     <div class="art-inner">
       <div>
-        <span class="lbl r">L'art comme passage</span>
+        <span class="lbl r">Art-thérapie · L'art comme passage</span>
         <h2 class="h2 r d1">Enraciner<br><em>ce qui a changé</em></h2>
         <div class="bar r d2"></div>
         <p class="body-t r d2">Le travail thérapeutique peut rester suspendu dans le mental si on ne lui donne pas un corps, une forme, une matière. L'art-thérapie n'est pas une illustration de ce qui a été dit — c'est un passage par lui-même.</p>
