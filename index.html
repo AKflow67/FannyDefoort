@@ -16,7 +16,7 @@
     "@type": "LocalBusiness",
     "name": "Fanny Defoort — Psychopraticienne EMDR",
     "description": "Psychopraticienne EMDR-DSA. Désensibilisation des traumas, Breathwork, Art-thérapie. Enfants et adultes.",
-    "address": { "@type": "PostalAddress", "streetAddress": "À définir", "addressLocality": "Bagnères-de-Bigorre", "postalCode": "65200", "addressRegion": "Hautes-Pyrénées", "addressCountry": "FR" },
+    "address": { "@type": "PostalAddress", "streetAddress": "3 rue Soubies", "addressLocality": "Bagnères-de-Bigorre", "postalCode": "65200", "addressRegion": "Hautes-Pyrénées", "addressCountry": "FR" },
     "url": "https://fannydefoort.fr"
   }
   </script>
@@ -31,8 +31,8 @@
       --sand:    #F2EAE0;
       --sand-dk: #E8DDD0;
       --fog:     #F8F5F0;
-      --moss:    #6A8566;
-      --moss-dk: #4E6B4A;
+      --moss:    #2AA7AF;
+      --moss-dk: #138992;
       --ink:     #1F1A15;
       --mid:     #6B6059;
       --line:    rgba(200,168,130,.22);
@@ -100,14 +100,14 @@
       font-size: .72rem;
       font-weight: 500;
       letter-spacing: .04em;
-      box-shadow: 0 4px 20px rgba(78,107,74,.35);
+      box-shadow: 0 4px 20px rgba(19,137,146,.35);
       transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s, background .2s;
       cursor: pointer;
       border: none;
     }
     #fab-rdv:hover {
       transform: translateY(-3px) scale(1.03);
-      box-shadow: 0 8px 28px rgba(78,107,74,.45);
+      box-shadow: 0 8px 28px rgba(19,137,146,.45);
       background: var(--moss);
     }
     #fab-rdv svg { flex-shrink: 0; }
@@ -174,7 +174,7 @@
     .btn { display: inline-block; padding: .85rem 1.9rem; font-family: var(--sans); font-size: .78rem; font-weight: 500; letter-spacing: .04em; border-radius: 3px; border: none; cursor: pointer; transition: transform var(--ease), box-shadow var(--ease), background var(--ease); }
     .btn:hover { transform: translateY(-2px); }
     .btn-moss { background: var(--moss-dk); color: #fff; }
-    .btn-moss:hover { background: var(--moss); box-shadow: 0 8px 24px rgba(78,107,74,.3); }
+    .btn-moss:hover { background: var(--moss); box-shadow: 0 8px 24px rgba(19,137,146,.3); }
     .btn-clay { background: var(--clay-dk); color: #fff; }
     .btn-clay:hover { background: var(--clay); box-shadow: 0 8px 24px rgba(156,122,82,.3); }
     @keyframes up {
@@ -246,8 +246,29 @@
       animation: up .7s .1s cubic-bezier(.16,1,.3,1) forwards;
     }
 
-    /* Map contact */
-    .map-wrap iframe { width: 100%; height: 200px; border: 0; border-radius: 4px; display: block; margin-top: 1.5rem; }
+    /* ── ENCART APPEL DIRECT ── */
+    .call-box {
+      margin-top: 2.5rem;
+      background: var(--moss-dk);
+      border-radius: 6px;
+      padding: 1.75rem 2rem;
+      color: #fff;
+      box-shadow: 0 12px 32px rgba(19,137,146,.25);
+    }
+    .call-lbl { display: block; font-size: .62rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: rgba(255,255,255,.72); margin-bottom: .65rem; }
+    .call-num {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 2.6vw, 2rem);
+      color: #fff;
+      display: inline-flex; align-items: center; gap: .85rem;
+      transition: opacity .3s;
+    }
+    .call-num:hover { opacity: .85; }
+    .call-note { font-size: .74rem; color: rgba(255,255,255,.65); margin-top: .6rem; line-height: 1.6; }
+
+    /* Carte pleine largeur */
+    .map-band { width: 100%; height: 400px; overflow: hidden; }
+    .map-band iframe { width: 100%; height: 400px; border: 0; display: block; filter: saturate(.85) contrast(.95); }
 
     /* ── HELPERS ── */
     .wrap { max-width: 1120px; margin: 0 auto; padding: 0 2rem; }
@@ -338,7 +359,22 @@
     .duo-visual { aspect-ratio: 4/5; overflow: hidden; border-radius: 4px; position: relative; }
     .duo-visual img { width: 100%; height: 100%; object-fit: cover; }
     .hyp-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; max-width: 920px; margin: 0 auto; }
-    .hyp-item { background: #fff; border: 1px solid var(--line); border-radius: 5px; padding: 1.6rem 1.5rem; }
+    .hyp-item {
+      background: #fff; border: 1px solid var(--line); border-radius: 5px; padding: 1.6rem 1.5rem;
+      position: relative; overflow: hidden;
+      transition: transform var(--ease), box-shadow var(--ease);
+    }
+    .hyp-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--moss), var(--clay));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform var(--ease);
+    }
+    .hyp-item:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,.07); }
+    .hyp-item:hover::after { transform: scaleX(1); }
     .hyp-item h4 { font-size: .82rem; font-weight: 600; margin-bottom: .4rem; color: var(--moss-dk); }
     .hyp-item p { font-size: .78rem; color: var(--mid); line-height: 1.65; }
 
@@ -444,10 +480,10 @@
       background: none; border: none; cursor: pointer;
       display: flex; flex-direction: column; align-items: center; gap: .5rem;
     }
-    #scroll-top.visible { opacity: 1; transform: none; }
-    #scroll-top svg { filter: drop-shadow(0 2px 8px rgba(0,0,0,.2)); transition: transform var(--ease); }
-    #scroll-top:hover svg { transform: translateY(-5px) scale(1.07); }
-    .scroll-lbl { font-size: .48rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--moss-dk); }
+    #scroll-top.visible { opacity: .8; transform: none; }
+    #scroll-top:hover { opacity: 1; }
+    #scroll-top svg { filter: drop-shadow(0 2px 6px rgba(0,0,0,.12)); transition: transform var(--ease); }
+    #scroll-top:hover svg { transform: translateY(-3px); }
 
     /* ── MOBILE ── */
     @media (max-width: 900px) {
@@ -543,28 +579,28 @@
     </div>
     <div class="acc-grid">
 
-      <div class="acc-card r">
+      <a href="#emdr" class="acc-card r">
         <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 4C9 4 7 6 7 8.5c0 1.2.5 2.2 1.3 3M12 4c3 0 5 2 5 4.5 0 1.2-.5 2.2-1.3 3M12 4v16M8.3 11.5C7 12.5 6 14 6 15.5 6 18 8 20 10.5 20M15.7 11.5c1.3 1 2.3 2.5 2.3 4 0 2.5-2 4.5-4.5 4.5"/></svg></div>
         <h3>EMDR-DSA</h3>
         <p>Désensibilisation des traumas et des stress associés. Une approche validée scientifiquement pour retraiter ce qui est resté figé — chocs, répétitions douloureuses, blessures relationnelles.</p>
         <span class="acc-tag">Enfants · Adultes · Cabinet 65</span>
-      </div>
+      </a>
 
-      <div class="acc-card r d1">
+      <a href="#breathwork" class="acc-card r d1">
         <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 20V4M8 8c-2-2-5-1-5 2s3 4 5 2M16 8c2-2 5-1 5 2s-3 4-5 2M8 16c-2 2-5 1-5-2M16 16c2 2 5 1 5-2"/></svg></div>
         <h3>Breathwork</h3>
         <p>La respiration consciente comme outil de libération. En groupe ou en individuel, le Breathwork ouvre un espace de lâcher-prise profond, d'accès aux émotions et de transformation sans passer par le mental.</p>
         <span class="acc-tag">Groupe · Individuel · Présentiel</span>
-      </div>
+      </a>
 
-      <div class="acc-card r d2">
+      <a href="#hypnose" class="acc-card r d2">
         <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 21C12 21 4 14.5 4 9a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 5.5-8 12-8 12z"/><path d="M12 8v4M12 16h.01" stroke-width="1.5"/></svg></div>
         <h3>Hypnose</h3>
         <p>Utilisée comme outil d'accès aux ressources profondes et de reconfiguration des schémas inconscients. Complémentaire à l'EMDR pour certains accompagnements.</p>
         <span class="acc-tag">Individuel · Sur demande</span>
-      </div>
+      </a>
 
-      <div class="acc-card wide r d1">
+      <a href="#art" class="acc-card wide r d1">
         <div>
           <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 19c-4.4 0-8-3.1-8-7 0-3.9 3.6-7 8-7 4.4 0 7 2.2 7 5 0 2-1.3 3-3 3h-1.5c-.8 0-1.5.7-1.5 1.5S13.7 16 14.5 16c.9 0 1.5.6 1.5 1.5C16 18.3 14.2 19 12 19z"/><circle cx="8.5" cy="11.5" r="1"/><circle cx="11" cy="8.5" r="1"/><circle cx="14" cy="9" r="1"/></svg></div>
           <h3>Art-thérapie</h3>
@@ -581,7 +617,7 @@
             <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Médias manuels</span>
           </div>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>
@@ -797,36 +833,19 @@
             <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="var(--moss-dk)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M12 21c0 0-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
             <div>
               <div class="c-info-lbl">Cabinet</div>
-              <div class="c-info-val">7 allée des Coustous<br>65200 Bagnères-de-Bigorre</div>
+              <div class="c-info-val">3 rue Soubies<br>65200 Bagnères-de-Bigorre</div>
             </div>
           </div>
-          <div class="c-info r d1">
-            <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="var(--moss-dk)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.5 11.5 0 0 0 3.6.6 1 1 0 0 1 1 1V19a1 1 0 0 1-1 1A17 17 0 0 1 4 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1L6.6 10.8z"/></svg></div>
-            <div>
-              <div class="c-info-lbl">Téléphone</div>
-              <div class="c-info-val"><a href="tel:+33613183473">06 13 18 34 73</a></div>
-            </div>
-          </div>
-          <div class="c-info r d2">
-            <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="var(--moss-dk)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
-            <div>
-              <div class="c-info-lbl">Email</div>
-              <div class="c-info-val" id="cmail-fanny"></div>
-            </div>
-          </div>
-
         </div>
 
-        <!-- Google Maps -->
-        <div class="map-wrap r d3">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23547.8!2d0.14869!3d43.05854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a865cd18f8d535%3A0x40819a5fd8a7a20!2sBagn%C3%A8res-de-Bigorre%2C%2065200!5e0!3m2!1sfr!2sfr!4v1680000000000!5m2!1sfr!2sfr"
-            width="100%" height="200"
-            style="border:0;border-radius:4px;display:block;margin-top:1.5rem;filter:saturate(.85) contrast(.95) brightness(1.05)"
-            allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Cabinet Fanny Defoort — Bagnères-de-Bigorre">
-          </iframe>
+        <!-- Appel direct — mis en avant -->
+        <div class="call-box r d2">
+          <span class="call-lbl">Le plus simple — appelez directement</span>
+          <a class="call-num" href="tel:+33613183473">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.5 11.5 0 0 0 3.6.6 1 1 0 0 1 1 1V19a1 1 0 0 1-1 1A17 17 0 0 1 4 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>
+            06 13 18 34 73
+          </a>
+          <p class="call-note">Souvent en séance, je ne peux pas toujours décrocher — sentez-vous libre de laisser un message ou d'envoyer un SMS, je vous rappelle dès que possible.</p>
         </div>
       </div>
       <div class="form-box r sr">
@@ -861,6 +880,26 @@
   </div>
 </section>
 
+<!-- CARTE PLEINE LARGEUR -->
+<section style="padding:4rem 0 0;background:var(--sand)">
+  <div class="wrap">
+    <div class="r" style="margin-bottom:2rem">
+      <span class="lbl">Me trouver</span>
+      <h2 class="h2">Le <em>cabinet</em></h2>
+      <div class="bar"></div>
+      <p style="font-size:.85rem;color:var(--mid)">3 rue Soubies — 65200 Bagnères-de-Bigorre</p>
+    </div>
+  </div>
+  <div class="map-band r">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.4!2d0.1469913!3d43.0630147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a82f751b5a2e43%3A0x46dfac3dbc1637e9!2sEMDR%20DSA%2C%20hypnose%20-%20Fanny%20Defoort%20-%20Psychopratienne!5e0!3m2!1sfr!2sfr!4v1"
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Cabinet Fanny Defoort — Bagnères-de-Bigorre">
+    </iframe>
+  </div>
+</section>
+
 <!-- FOOTER -->
 </div><!-- /main-wrap -->
 <footer>
@@ -889,7 +928,7 @@
           <li><a href="#">Mentions légales</a></li>
           <li><a href="#">Politique de confidentialité</a></li>
         </ul>
-        <p style="margin-top:1rem;font-size:.65rem;color:rgba(255,255,255,.28);line-height:1.6">7 allée des Coustous<br>65200 Bagnères-de-Bigorre</p>
+        <p style="margin-top:1rem;font-size:.65rem;color:rgba(255,255,255,.28);line-height:1.6">3 rue Soubies<br>65200 Bagnères-de-Bigorre</p>
       </div>
     </div>
     <div class="foot-btm">
@@ -901,16 +940,10 @@
 
 <!-- BOUTON SCROLL TOP -->
 <button id="scroll-top" aria-label="Revenir en haut">
-  <svg viewBox="0 0 52 64" fill="none" width="52" height="64" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="26" cy="32" r="24" fill="rgba(248,245,240,0.92)" stroke="rgba(106,133,102,0.3)" stroke-width="1.2"/>
-    <line x1="26" y1="46" x2="26" y2="22" stroke="#4E6B4A" stroke-width="2" stroke-linecap="round"/>
-    <path d="M16,32 L26,18 L36,32" stroke="#4E6B4A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M18,31 L26,20 L34,31 L26,27Z" fill="rgba(106,133,102,0.2)"/>
-    <path d="M19,47 C16,47 14,45 15,43 C16,41 18,42 18,44" stroke="rgba(106,133,102,0.45)" stroke-width="1" fill="none" stroke-linecap="round"/>
-    <path d="M33,47 C36,47 38,45 37,43 C36,41 34,42 34,44" stroke="rgba(106,133,102,0.45)" stroke-width="1" fill="none" stroke-linecap="round"/>
-    <circle cx="26" cy="48" r="1.4" fill="rgba(106,133,102,0.45)"/>
+  <svg viewBox="0 0 44 44" fill="none" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="22" cy="22" r="20.5" fill="rgba(248,245,240,0.88)" stroke="rgba(19,137,146,0.28)" stroke-width="1"/>
+    <path d="M14.5,25.5 L22,18 L29.5,25.5" stroke="#138992" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
-  <span class="scroll-lbl">Haut</span>
 </button>
 
 <script>
@@ -959,22 +992,9 @@
   }, { passive: true });
   scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  // Email anti-obfuscation
-  (function() {
-    var u = 'fanny.defoort', d = 'protonmail.com';
-    var el = document.getElementById('cmail-fanny');
-    if (el) {
-      var a = document.createElement('a');
-      a.href = 'mailto:' + u + '@' + d;
-      a.textContent = u + '@' + d;
-      a.style.cssText = 'font-size:.85rem;font-weight:500;text-decoration:underline;text-underline-offset:3px;';
-      el.appendChild(a);
-    }
-  })();
-
   // Barre de progression scroll
   var pb = document.createElement('div');
-  pb.style.cssText = 'position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,#4E6B4A,#C8A882);z-index:9999;width:0%;transition:width .1s linear;pointer-events:none;';
+  pb.style.cssText = 'position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,#138992,#C8A882);z-index:9999;width:0%;transition:width .1s linear;pointer-events:none;';
   document.body.appendChild(pb);
   window.addEventListener('scroll', function() {
     var total = document.documentElement.scrollHeight - window.innerHeight;
