@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fanny Defoort — Psychopraticienne EMDR-DSA · Bagnères-de-Bigorre</title>
+  <title>Fanny Defoort - Psychopraticienne EMDR-DSA · Bagnères-de-Bigorre</title>
   <meta name="description" content="Fanny Defoort, psychopraticienne EMDR-DSA à Bagnères-de-Bigorre. Désensibilisation des traumas, Breathwork, Art-thérapie. Enfants et adultes.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fannydefoort.fr/">
-  <meta property="og:title" content="Fanny Defoort — Psychopraticienne EMDR">
+  <meta property="og:title" content="Fanny Defoort - Psychopraticienne EMDR">
   <meta property="og:description" content="Désensibilisation des traumas, Breathwork, Art-thérapie. Cabinet à Bagnères-de-Bigorre.">
   <meta property="og:type" content="website">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Fanny Defoort — Psychopraticienne EMDR",
+    "name": "Fanny Defoort - Psychopraticienne EMDR",
     "description": "Psychopraticienne EMDR-DSA. Désensibilisation des traumas, Breathwork, Art-thérapie. Enfants et adultes.",
     "address": { "@type": "PostalAddress", "streetAddress": "3 rue Soubies", "addressLocality": "Bagnères-de-Bigorre", "postalCode": "65200", "addressRegion": "Hautes-Pyrénées", "addressCountry": "FR" },
     "url": "https://fannydefoort.fr"
@@ -57,16 +57,28 @@
     }
     nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,.07); }
     .nav-in { max-width: 1120px; margin: 0 auto; padding: 0 2rem; width: 100%; display: flex; align-items: center; justify-content: space-between; }
-    .nav-brand { display: flex; align-items: center; gap: .65rem; text-decoration: none; }
-    .nav-brand-leaf { color: var(--moss); opacity: .7; flex-shrink: 0; }
+    .nav-brand { display: flex; align-items: center; text-decoration: none; }
     .nav-name {
       font-family: var(--serif);
       font-size: 1.18rem;
       font-weight: 400;
       font-style: italic;
-      color: var(--ink);
+      color: var(--moss-dk);
       letter-spacing: .01em;
     }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-tel {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .84rem; font-weight: 600; letter-spacing: .03em;
+      color: var(--moss-dk);
+      border: 1px solid var(--line);
+      background: var(--sand);
+      padding: .45rem .9rem;
+      border-radius: 50px;
+      transition: background .3s, color .3s;
+      white-space: nowrap;
+    }
+    .nav-tel:hover { background: var(--moss-dk); color: #fff; }
     .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
     .nav-links a { font-size: .76rem; font-weight: 500; color: var(--mid); transition: color .3s; position: relative; padding-bottom: .25rem; }
     .nav-links a::after {
@@ -228,7 +240,7 @@
       stroke-width: 2.2;
       stroke-linecap: round;
       stroke-linejoin: round;
-      opacity: .22;
+      opacity: .09;
       filter: url(#sketch-filter);
     }
     /* Vague en bas du hero */
@@ -442,7 +454,7 @@
     .c-ico { width: 38px; height: 38px; border-radius: 50%; background: var(--sand-dk); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; }
     .c-info-lbl { font-size: .58rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--mid); margin-bottom: .2rem; }
     .c-info-val { font-size: .85rem; font-weight: 500; }
-    .form-box { background: #fff; border: 1px solid var(--line); border-radius: 5px; padding: 2.5rem; }
+    .form-box { background: #fff; border: 1px solid var(--line); border-radius: 5px; padding: 2.5rem; position: relative; z-index: 2; }
     .form-box h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 400; margin-bottom: .35rem; }
     .form-sub { font-size: .76rem; color: var(--mid); margin-bottom: 2rem; }
     .fg { margin-bottom: 1.1rem; }
@@ -488,7 +500,7 @@
     /* ── MOBILE ── */
     @media (max-width: 900px) {
       .nav-links { display: none; }
-      .nav-in { grid-template-columns: 1fr; justify-items: center; }
+      .nav-tel { font-size: .78rem; padding: .4rem .75rem; }
       .page-crayon { display: none; }
       .emdr-grid, .duo-grid, .art-inner, .qui-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .acc-grid, .hyp-points { grid-template-columns: 1fr; }
@@ -517,9 +529,9 @@
 <nav id="nav">
   <div class="nav-in">
     <a href="#" class="nav-brand">
-      <svg class="nav-brand-leaf" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12M12 12C12 7 7 4 3 5c0 5 3 9 9 7zM12 12c0-5 5-8 9-7 0 5-3 9-9 7z"/></svg>
       <span class="nav-name">Fanny Defoort</span>
     </a>
+    <div class="nav-right">
     <ul class="nav-links">
       <li><a href="#accompagnements">Accompagnements</a></li>
       <li><a href="#emdr">L'EMDR-DSA</a></li>
@@ -529,6 +541,11 @@
       <li><a href="#qui">Qui suis-je</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <a class="nav-tel" href="tel:+33613183473">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.5 11.5 0 0 0 3.6.6 1 1 0 0 1 1 1V19a1 1 0 0 1-1 1A17 17 0 0 1 4 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>
+      06 13 18 34 73
+    </a>
+    </div>
   </div>
 </nav>
 
@@ -575,14 +592,14 @@
       <span class="lbl">Ce que je propose</span>
       <h2 class="h2">Mes <em>accompagnements</em></h2>
       <div class="bar"></div>
-      <p class="body-t" style="max-width:540px;margin:0 auto">Des approches complémentaires — thérapeutiques, corporelles et créatives — pour un travail qui touche l'être entier.</p>
+      <p class="body-t" style="max-width:540px;margin:0 auto">Des approches thérapeutiques, corporelles et créatives qui se complètent, pour un travail qui touche l'être entier.</p>
     </div>
     <div class="acc-grid">
 
       <a href="#emdr" class="acc-card r">
         <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 4C9 4 7 6 7 8.5c0 1.2.5 2.2 1.3 3M12 4c3 0 5 2 5 4.5 0 1.2-.5 2.2-1.3 3M12 4v16M8.3 11.5C7 12.5 6 14 6 15.5 6 18 8 20 10.5 20M15.7 11.5c1.3 1 2.3 2.5 2.3 4 0 2.5-2 4.5-4.5 4.5"/></svg></div>
         <h3>EMDR-DSA</h3>
-        <p>Désensibilisation des traumas et des stress associés. Une approche validée scientifiquement pour retraiter ce qui est resté figé — chocs, répétitions douloureuses, blessures relationnelles.</p>
+        <p>Désensibilisation des traumas et des stress associés. Une approche validée scientifiquement pour retraiter ce qui est resté figé : chocs, répétitions douloureuses, blessures relationnelles.</p>
         <span class="acc-tag">Enfants · Adultes · Cabinet 65</span>
       </a>
 
@@ -608,7 +625,7 @@
         </div>
         <div>
           <p>L'art-thérapie peut venir compléter le travail thérapeutique par la création. Après avoir traversé quelque chose en séance, la main, le corps et la matière deviennent des relais d'intégration.</p>
-          <p style="font-size:.82rem;color:var(--mid);line-height:1.75">Dessiner, peindre, modeler l'argile, manipuler des marionnettes — ce ne sont pas des exercices artistiques. Ce sont des passages. Ce qui a été compris dans la tête et ressenti dans le corps se grave dans la matière, s'ancre, se dépose. Un passage très profond.</p>
+          <p style="font-size:.82rem;color:var(--mid);line-height:1.75">Dessiner, peindre, modeler l'argile, manipuler des marionnettes : bien plus que des exercices artistiques, ce sont des passages. Ce qui a été compris dans la tête et ressenti dans le corps vient se déposer et s'ancrer dans la matière.</p>
           <div class="art-medias" style="margin-top:1rem">
             <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Dessin</span>
             <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Peinture</span>
@@ -628,16 +645,16 @@
   <div class="wrap">
     <div class="emdr-grid">
       <div class="emdr-visual r sl">
-        <img src="art-papillon-pastel.webp" alt="Peinture pastel — papillons aquarelle">
+        <img src="art-papillon-pastel.webp" alt="Peinture pastel - papillons aquarelle">
         <span class="emdr-badge">EMDR · DSA</span>
       </div>
       <div>
         <span class="lbl r">Comprendre</span>
         <h2 class="h2 r d1">Qu'est-ce que<br><em>l'EMDR ?</em></h2>
         <div class="bar r d2"></div>
-        <p class="body-t r d2">L'EMDR — <em>Eye Movement Desensitization and Reprocessing</em> — est une approche thérapeutique développée dans les années 1980 pour traiter les traumas et les expériences émotionnellement douloureuses non digérées.</p>
+        <p class="body-t r d2">L'EMDR (<em>Eye Movement Desensitization and Reprocessing</em>) est une approche thérapeutique développée dans les années 1980 pour traiter les traumas et les expériences émotionnellement douloureuses non digérées.</p>
         <p class="body-t r d2">En utilisant des stimulations bilatérales alternées (mouvements oculaires, sons ou tapotements), l'EMDR permet au cerveau de retraiter les souvenirs figés et de libérer leur charge émotionnelle. Ce qui était bloqué se remet en mouvement.</p>
-        <p class="body-t r d2">La méthode DSA — Désensibilisation des Stress et traumas Associés — en est une application élargie, accessible même pour les traumas dits de « petite t » : situations d'humiliation, de rejet, de honte, d'insécurité répétée.</p>
+        <p class="body-t r d2">La méthode DSA (Désensibilisation des Stress et traumas Associés) en est une application élargie, accessible même pour les traumas dits de « petite t » : situations d'humiliation, de rejet, de honte, d'insécurité répétée.</p>
         <div class="emdr-steps r d3">
           <div class="emdr-step">
             <div class="step-n">1</div>
@@ -675,8 +692,8 @@
         <h2 class="h2 r d1">Le <em>Breathwork</em></h2>
         <div class="bar r d2"></div>
         <p class="body-t r d2">Le Breathwork utilise la respiration consciente comme porte d'entrée vers ce que le mental ne sait pas atteindre. Le souffle, amplifié et soutenu, ouvre un espace de lâcher-prise profond où les émotions retenues peuvent enfin circuler.</p>
-        <p class="body-t r d2">Sans parole, sans analyse — c'est le corps qui fait le travail. Tensions accumulées, émotions figées, charges anciennes : la respiration vient les remettre en mouvement, à votre rythme.</p>
-        <p class="body-t r d3">Je facilite des sessions de groupe mensuelles co-animées — Breathwork Chamanique Healing — ainsi que des séances individuelles, en présentiel.</p>
+        <p class="body-t r d2">Sans parole, sans analyse : c'est le corps qui fait le travail. Tensions accumulées, émotions figées, charges anciennes : la respiration vient les remettre en mouvement, à votre rythme.</p>
+        <p class="body-t r d3">Je facilite des sessions de groupe mensuelles co-animées (Breathwork Chamanique Healing) ainsi que des séances individuelles, en présentiel.</p>
         <div class="art-medias r d3" style="margin-top:1.5rem">
           <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--fog)">Groupe</span>
           <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--fog)">Individuel</span>
@@ -685,7 +702,7 @@
         </div>
       </div>
       <div class="duo-visual r sr" style="aspect-ratio:16/10">
-        <img src="breathwork-blonde.webp" alt="Breathwork — respiration consciente allongée, en pleine détente">
+        <img src="breathwork-blonde.webp" alt="Breathwork - respiration consciente allongée, en pleine détente">
         <span class="emdr-badge">Souffle · Lâcher-prise</span>
       </div>
     </div>
@@ -699,7 +716,7 @@
       <span class="lbl">Ressources profondes</span>
       <h2 class="h2">L'<em>hypnose</em></h2>
       <div class="bar"></div>
-      <p class="body-t" style="max-width:560px;margin:0 auto">L'hypnose ouvre un accès direct aux ressources profondes et permet de reconfigurer les schémas inconscients — ces automatismes qui rejouent les mêmes scénarios malgré nous.</p>
+      <p class="body-t" style="max-width:560px;margin:0 auto">L'hypnose ouvre un accès direct aux ressources profondes et permet de reconfigurer les schémas inconscients, ces automatismes qui rejouent les mêmes scénarios malgré nous.</p>
     </div>
     <div class="hyp-points">
       <div class="hyp-item r">
@@ -727,11 +744,11 @@
         <span class="lbl r">Art-thérapie · L'art comme passage</span>
         <h2 class="h2 r d1">Enraciner<br><em>ce qui a changé</em></h2>
         <div class="bar r d2"></div>
-        <p class="body-t r d2">Le travail thérapeutique peut rester suspendu dans le mental si on ne lui donne pas un corps, une forme, une matière. L'art-thérapie n'est pas une illustration de ce qui a été dit — c'est un passage par lui-même.</p>
+        <p class="body-t r d2">Le travail thérapeutique peut rester suspendu dans le mental si on ne lui donne pas un corps, une forme, une matière. L'art-thérapie est bien plus qu'une illustration de ce qui a été dit : c'est un passage par lui-même.</p>
         <div class="art-quote r d2">
           "Ce qui a été transformé se grave dans la matière. Le corps tient ce que l'esprit a traversé."
         </div>
-        <p class="body-t r d3">Dessiner, modeler, peindre — ces gestes simples activent d'autres voies neurologiques, touchent d'autres mémoires. Ils permettent à la transformation de s'ancrer vraiment, dans le corps, dans le réel.</p>
+        <p class="body-t r d3">Dessiner, modeler, peindre : ces gestes simples activent d'autres voies neurologiques, touchent d'autres mémoires. Ils permettent à la transformation de s'ancrer vraiment, dans le corps, dans le réel.</p>
         <div class="art-medias r d3">
           <span class="art-tag">Dessin</span>
           <span class="art-tag">Peinture</span>
@@ -742,7 +759,7 @@
         </div>
       </div>
       <div class="art-visual r sr">
-        <img src="peinture-pot-fanny.webp" alt="Art-thérapie — intégration par la création">
+        <img src="peinture-pot-fanny.webp" alt="Art-thérapie - intégration par la création">
       </div>
     </div>
   </div>
@@ -754,7 +771,7 @@
     <div class="qui-grid">
       <div class="portrait-wrap">
         <div class="portrait r">
-          <img src="photo-Fanny.webp" alt="Fanny Defoort — Psychopraticienne EMDR-DSA">
+          <img src="photo-Fanny.webp" alt="Fanny Defoort - Psychopraticienne EMDR-DSA">
         </div>
         <p class="portrait-caption">Fanny Defoort · Bagnères-de-Bigorre</p>
       </div>
@@ -762,8 +779,8 @@
         <span class="lbl r">À propos</span>
         <h2 class="h2 r d1">Qui <em>suis-je ?</em></h2>
         <div class="bar r d2"></div>
-        <p class="body-t r d2">Avant d'être psychopraticienne, j'ai traversé le monde du théâtre, du clown et de la création collective — des espaces où le corps, l'émotion et le jeu apprennent à coexister. Ce parcours artistique a façonné ma façon d'accompagner : avec présence, douceur et une confiance profonde dans les ressources de chacun.</p>
-        <p class="body-t r d2">Ma pratique intègre différentes formes d'accompagnement — thérapeutiques, corporelles et créatives — parce que je crois qu'une transformation profonde passe par plusieurs portes à la fois.</p>
+        <p class="body-t r d2">Avant d'être psychopraticienne, j'ai traversé le monde du théâtre, du clown et de la création collective, des espaces où le corps, l'émotion et le jeu apprennent à coexister. Ce parcours artistique a façonné ma façon d'accompagner : avec présence, douceur et une confiance profonde dans les ressources de chacun.</p>
+        <p class="body-t r d2">Ma pratique intègre différentes formes d'accompagnement, thérapeutiques, corporelles et créatives, parce que je crois qu'une transformation profonde passe par plusieurs portes à la fois.</p>
 
         <div class="timeline r d2">
           <div class="tl-item">
@@ -791,7 +808,7 @@
             <span class="tl-yr">Breath-<br>work</span>
             <div class="tl-body">
               <h4>Breathwork Chamanique Healing</h4>
-              <p>Facilitatrice en respiration consciente. Sessions de groupe mensuelles co-animées — un souffle nouveau vers soi-même.</p>
+              <p>Facilitatrice en respiration consciente. Sessions de groupe mensuelles co-animées, un souffle nouveau vers soi-même.</p>
             </div>
           </div>
         </div>
@@ -799,7 +816,7 @@
         <div class="val-grid r d3">
           <div class="val-item">
             <h4>Approche intégrative</h4>
-            <p>Plusieurs portes d'entrée pour toucher l'être entier — mental, corps, création.</p>
+            <p>Plusieurs portes d'entrée pour toucher l'être entier : mental, corps, création.</p>
           </div>
           <div class="val-item">
             <h4>Enfants &amp; adultes</h4>
@@ -838,14 +855,14 @@
           </div>
         </div>
 
-        <!-- Appel direct — mis en avant -->
+        <!-- Appel direct, mis en avant -->
         <div class="call-box r d2">
-          <span class="call-lbl">Le plus simple — appelez directement</span>
+          <span class="call-lbl">Le plus simple : appelez directement</span>
           <a class="call-num" href="tel:+33613183473">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.5 11.5 0 0 0 3.6.6 1 1 0 0 1 1 1V19a1 1 0 0 1-1 1A17 17 0 0 1 4 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>
             06 13 18 34 73
           </a>
-          <p class="call-note">Souvent en séance, je ne peux pas toujours décrocher — sentez-vous libre de laisser un message ou d'envoyer un SMS, je vous rappelle dès que possible.</p>
+          <p class="call-note">Sentez-vous libre de laisser un message ou d'envoyer un SMS, je vous rappelle dès que possible.</p>
         </div>
       </div>
       <div class="form-box r sr">
@@ -887,7 +904,7 @@
       <span class="lbl">Me trouver</span>
       <h2 class="h2">Le <em>cabinet</em></h2>
       <div class="bar"></div>
-      <p style="font-size:.85rem;color:var(--mid)">3 rue Soubies — 65200 Bagnères-de-Bigorre</p>
+      <p style="font-size:.85rem;color:var(--mid)">3 rue Soubies - 65200 Bagnères-de-Bigorre</p>
     </div>
   </div>
   <div class="map-band r">
@@ -895,7 +912,7 @@
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.4!2d0.1469913!3d43.0630147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a82f751b5a2e43%3A0x46dfac3dbc1637e9!2sEMDR%20DSA%2C%20hypnose%20-%20Fanny%20Defoort%20-%20Psychopratienne!5e0!3m2!1sfr!2sfr!4v1"
       allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"
-      title="Cabinet Fanny Defoort — Bagnères-de-Bigorre">
+      title="Cabinet Fanny Defoort - Bagnères-de-Bigorre">
     </iframe>
   </div>
 </section>
@@ -932,7 +949,7 @@
       </div>
     </div>
     <div class="foot-btm">
-      <span>© 2026 Fanny Defoort — Tous droits réservés</span>
+      <span>© 2026 Fanny Defoort - Tous droits réservés</span>
       <span style="font-size:.55rem;opacity:.35">site par <a href="https://agencementklein.fr" style="color:inherit;text-decoration:underline;text-underline-offset:2px;" target="_blank" rel="noopener">Tom Klein</a></span>
     </div>
   </div>
