@@ -68,8 +68,19 @@
       letter-spacing: .01em;
     }
     .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: .76rem; font-weight: 500; color: var(--mid); transition: color .3s; }
+    .nav-links a { font-size: .76rem; font-weight: 500; color: var(--mid); transition: color .3s; position: relative; padding-bottom: .25rem; }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 1.5px;
+      background: var(--moss);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .35s cubic-bezier(.16,1,.3,1);
+    }
     .nav-links a:hover { color: var(--moss-dk); }
+    .nav-links a:hover::after { transform: scaleX(1); }
 
     /* ── BOUTON FLOTTANT RDV ── */
     #fab-rdv {
@@ -637,8 +648,8 @@
           <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--fog)">Sessions mensuelles</span>
         </div>
       </div>
-      <div class="duo-visual r sr">
-        <img src="splendeurs-dautomne-22-x-30-cm.webp" alt="Peinture — Splendeurs d'automne, 22 × 30 cm">
+      <div class="duo-visual r sr" style="aspect-ratio:16/10">
+        <img src="breathwork-blonde.webp" alt="Breathwork — respiration consciente allongée, en pleine détente">
         <span class="emdr-badge">Souffle · Lâcher-prise</span>
       </div>
     </div>
