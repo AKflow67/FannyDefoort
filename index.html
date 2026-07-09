@@ -28,9 +28,9 @@
     :root {
       --clay:    #C8A882;
       --clay-dk: #9C7A52;
-      --sand:    #F2EAE0;
-      --sand-dk: #E8DDD0;
-      --fog:     #F8F5F0;
+      --sand:    #F8F2E9;
+      --sand-dk: #F1E9DC;
+      --fog:     #FDFBF6;
       --moss:    #2AA7AF;
       --moss-dk: #138992;
       --ink:     #1F1A15;
@@ -50,7 +50,7 @@
     nav {
       position: fixed; inset: 0 0 auto 0; z-index: 200;
       height: 68px; display: flex; align-items: center;
-      background: rgba(248,245,240,.94);
+      background: rgba(253,251,246,.94);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--line);
       transition: box-shadow .3s;
@@ -145,8 +145,8 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(120deg, rgba(20,15,10,.78) 0%, rgba(20,15,10,.42) 55%, rgba(20,15,10,.15) 100%),
-        linear-gradient(to top, rgba(20,15,10,.55) 0%, transparent 45%);
+        linear-gradient(120deg, rgba(20,15,10,.55) 0%, rgba(20,15,10,.26) 55%, rgba(20,15,10,.06) 100%),
+        linear-gradient(to top, rgba(20,15,10,.48) 0%, transparent 45%);
     }
     .hero-body {
       position: relative;
@@ -445,6 +445,9 @@
     .val-item { background: var(--fog); border: 1px solid var(--line); border-radius: 4px; padding: 1.1rem 1.25rem; }
     .val-item h4 { font-size: .78rem; font-weight: 600; margin-bottom: .25rem; color: var(--moss-dk); }
     .val-item p { font-size: .74rem; color: var(--mid); line-height: 1.5; }
+    .form-list { margin-top: 1.75rem; list-style: none; display: flex; flex-direction: column; gap: .9rem; }
+    .form-list li { position: relative; padding-left: 1.6rem; font-size: .88rem; color: var(--mid); line-height: 1.7; }
+    .form-list li::before { content: ''; position: absolute; left: 0; top: .68em; width: 14px; height: 2px; background: linear-gradient(90deg, var(--moss), var(--clay)); }
 
     /* ── CONTACT ── */
     #contact { background: var(--fog); padding: 7rem 0; }
@@ -581,7 +584,7 @@
     </p>
   </div>
   <svg class="hero-wave" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,80 L0,48 Q240,0 480,32 Q720,64 960,22 Q1200,-18 1440,30 L1440,80Z" fill="#F2EAE0"/>
+    <path d="M0,80 L0,48 Q240,0 480,32 Q720,64 960,22 Q1200,-18 1440,30 L1440,80Z" fill="#F8F2E9"/>
   </svg>
 </section>
 
@@ -779,58 +782,17 @@
         <span class="lbl r">À propos</span>
         <h2 class="h2 r d1">Qui <em>suis-je ?</em></h2>
         <div class="bar r d2"></div>
-        <p class="body-t r d2">Avant d'être psychopraticienne, j'ai traversé le monde du théâtre, du clown et de la création collective, des espaces où le corps, l'émotion et le jeu apprennent à coexister. Ce parcours artistique a façonné ma façon d'accompagner : avec présence, douceur et une confiance profonde dans les ressources de chacun.</p>
-        <p class="body-t r d2">Ma pratique intègre différentes formes d'accompagnement, thérapeutiques, corporelles et créatives, parce que je crois qu'une transformation profonde passe par plusieurs portes à la fois.</p>
-
-        <div class="timeline r d2">
-          <div class="tl-item">
-            <span class="tl-yr">Théâtre</span>
-            <div class="tl-body">
-              <h4>École Actéon · Compagnie Frêne-en-ciel</h4>
-              <p>Formation comédienne et metteure en scène à Arles. Clown, théâtre-forum, direction d'une compagnie d'art pluridisciplinaire.</p>
-            </div>
-          </div>
-          <div class="tl-item">
-            <span class="tl-yr">Art-<br>thérapie</span>
-            <div class="tl-body">
-              <h4>Formation Art-thérapeute</h4>
-              <p>Pédagogies alternatives, communication non-violente. L'art et la création comme vecteurs de transformation et d'ancrage.</p>
-            </div>
-          </div>
-          <div class="tl-item">
-            <span class="tl-yr">Psycho-<br>prat.</span>
-            <div class="tl-body">
-              <h4>Formation Psychopraticienne · EMDR-DSA</h4>
-              <p>Un an de formation intégrative (hypnose incluse), puis bifurcation naturelle vers la désensibilisation des traumas.</p>
-            </div>
-          </div>
-          <div class="tl-item">
-            <span class="tl-yr">Breath-<br>work</span>
-            <div class="tl-body">
-              <h4>Breathwork Chamanique Healing</h4>
-              <p>Facilitatrice en respiration consciente. Sessions de groupe mensuelles co-animées, un souffle nouveau vers soi-même.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="val-grid r d3">
-          <div class="val-item">
-            <h4>Approche intégrative</h4>
-            <p>Plusieurs portes d'entrée pour toucher l'être entier : mental, corps, création.</p>
-          </div>
-          <div class="val-item">
-            <h4>Enfants &amp; adultes</h4>
-            <p>Un accompagnement adapté à chaque âge, chaque histoire, chaque rythme.</p>
-          </div>
-          <div class="val-item">
-            <h4>Sans appartenance requise</h4>
-            <p>Quelle que soit votre vécu ou votre parcours thérapeutique antérieur.</p>
-          </div>
-          <div class="val-item">
-            <h4>Cabinet à Bagnères</h4>
-            <p>Accompagnement en présentiel dans un cadre dédié, chaleureux et confidentiel.</p>
-          </div>
-        </div>
+        <h3 class="h3 r d2" style="font-size:1.4rem;margin-top:.5rem">Mon parcours de formation</h3>
+        <ul class="form-list r d2">
+          <li>En cours de formation en psychanalyse et psychothérapie intégrative (IF2PI, Corinne Vera Alexandre)</li>
+          <li>Formation en EMDR-DSA (Ahtma)</li>
+          <li>Formation en Breathwork (Eva Swan)</li>
+          <li>Diplôme d'État d'éducatrice de jeunes enfants</li>
+          <li>Formation à la pédagogie Waldorf en petite enfance</li>
+          <li>Formation Accompagnement par les personnages intérieurs (Fabien Lesage)</li>
+          <li>Formation en Communication Non Violente de Marshall Rosenberg (Muriel Kalfala)</li>
+          <li>Diplôme de psychogénéalogie (Betty Tutrice)</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -958,7 +920,7 @@
 <!-- BOUTON SCROLL TOP -->
 <button id="scroll-top" aria-label="Revenir en haut">
   <svg viewBox="0 0 44 44" fill="none" width="44" height="44" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="22" cy="22" r="20.5" fill="rgba(248,245,240,0.88)" stroke="rgba(19,137,146,0.28)" stroke-width="1"/>
+    <circle cx="22" cy="22" r="20.5" fill="rgba(253,251,246,0.88)" stroke="rgba(19,137,146,0.28)" stroke-width="1"/>
     <path d="M14.5,25.5 L22,18 L29.5,25.5" stroke="#138992" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
 </button>
