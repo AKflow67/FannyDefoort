@@ -391,32 +391,28 @@
     .hyp-item p { font-size: .78rem; color: var(--mid); line-height: 1.65; }
 
     /* ── ART-THERAPIE (mise en avant) ── */
-    #art { background: var(--ink); padding: 7rem 0; overflow: hidden; }
+    #art { background: var(--sand); padding: 7rem 0; overflow: hidden; }
     .art-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .art-inner .lbl { color: rgba(200,168,130,.7); }
-    .art-inner .h2 { color: #fff; }
-    .art-inner .h2 em { color: rgba(200,168,130,.9); }
+    .art-inner .lbl { color: var(--clay-dk); }
     .art-inner .bar { background: linear-gradient(90deg, var(--clay), var(--moss)); }
-    .art-inner .body-t { color: rgba(255,255,255,.6); }
     .art-medias { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
     .art-tag {
       font-size: .68rem; font-weight: 600; letter-spacing: .08em;
-      color: rgba(255,255,255,.75);
-      border: 1px solid rgba(200,168,130,.35);
-      background: rgba(200,168,130,.1);
+      color: var(--moss-dk);
+      border: 1px solid var(--line);
+      background: var(--fog);
       padding: .35rem .85rem;
       border-radius: 20px;
     }
     .art-visual { aspect-ratio: 1; border-radius: 4px; overflow: hidden; }
-    .art-visual img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.85) brightness(.9); transition: filter var(--ease); }
-    .art-inner:hover .art-visual img { filter: saturate(1) brightness(1); }
+    .art-visual img { width: 100%; height: 100%; object-fit: cover; }
     .art-quote {
       font-family: var(--serif);
       font-size: 1.1rem;
       font-style: italic;
-      color: rgba(255,255,255,.55);
+      color: var(--clay-dk);
       padding: 1.25rem 0 1.25rem 1.5rem;
-      border-left: 2px solid rgba(200,168,130,.4);
+      border-left: 2px solid var(--clay);
       margin: 2rem 0;
       line-height: 1.65;
     }
