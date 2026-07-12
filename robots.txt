@@ -1,0 +1,28 @@
+# fannydefoort.fr - tous les robots bienvenus, y compris les IA
+
+User-agent: *
+Allow: /
+
+# Robots IA (GEO) - autorisation explicite
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://fannydefoort.fr/sitemap.xml

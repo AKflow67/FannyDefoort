@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# www vers apex
+RewriteCond %{HTTP_HOST} ^www\.fannydefoort\.fr$ [NC]
+RewriteRule ^ https://fannydefoort.fr%{REQUEST_URI} [L,R=301]
