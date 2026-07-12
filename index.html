@@ -45,6 +45,11 @@
       { "@type": "City", "name": "Lannemezan" },
       { "@type": "AdministrativeArea", "name": "Hautes-Pyrénées" }
     ],
+    "email": "contact@fannydefoort.fr",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "18:00" }
+    ],
     "url": "https://fannydefoort.fr"
   }
   </script>
@@ -839,6 +844,13 @@
               <div class="c-info-val">3 rue Soubies<br>65200 Bagnères-de-Bigorre</div>
             </div>
           </div>
+          <div class="c-info r d1">
+            <div class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="var(--moss-dk)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+            <div>
+              <div class="c-info-lbl">Horaires · sur rendez-vous</div>
+              <div class="c-info-val">Mercredi – vendredi : 8h – 19h<br>Samedi : 8h – 18h</div>
+            </div>
+          </div>
         </div>
 
         <!-- Appel direct, mis en avant -->
@@ -935,8 +947,8 @@
       <div class="fc">
         <h4>Infos</h4>
         <ul>
-          <li><a href="#">Mentions légales</a></li>
-          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#mentions-legales" onclick="document.getElementById('modal-mentions').style.display='flex';return false;">Mentions légales</a></li>
+          <li><a href="#politique-confidentialite" onclick="document.getElementById('modal-confidentialite').style.display='flex';return false;">Politique de confidentialité</a></li>
         </ul>
         <p style="margin-top:1rem;font-size:.65rem;color:rgba(255,255,255,.28);line-height:1.6">3 rue Soubies<br>65200 Bagnères-de-Bigorre</p>
       </div>
@@ -1111,6 +1123,148 @@
     buildPath();
     window.addEventListener('resize', buildPath, { passive: true });
   })();
+</script>
+
+<!-- ===== CSS MODALES LÉGALES ===== -->
+<style>
+.legal-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(31,26,21,.55);align-items:center;justify-content:center;padding:1.5rem}
+.legal-modal-content{background:#fff;color:#1F1A15;max-width:720px;width:100%;max-height:85vh;overflow-y:auto;border-radius:8px;padding:2.5rem 2rem;position:relative;font-family:'DM Sans',system-ui,sans-serif;font-size:.92rem;line-height:1.65}
+.legal-modal-content h2{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;font-weight:500;margin:0 0 1.5rem;color:#1F1A15}
+.legal-modal-content h3{font-size:1.02rem;font-weight:600;margin:1.8rem 0 .6rem;color:#138992}
+.legal-modal-content p{margin:.5rem 0}
+.legal-modal-content ul{margin:.5rem 0;padding-left:1.5rem}
+.legal-modal-content li{margin:.3rem 0}
+.legal-modal-content a{color:#138992}
+.legal-close{position:absolute;top:1rem;right:1.2rem;background:none;border:none;font-size:1.8rem;cursor:pointer;color:#6B6059;line-height:1;padding:.3rem}
+.legal-close:hover{color:#1F1A15}
+@media(max-width:600px){.legal-modal-content{padding:1.5rem 1.2rem;border-radius:8px}.legal-modal-content h2{font-size:1.2rem}}
+</style>
+
+<!-- ===== MODALE MENTIONS LÉGALES ===== -->
+<div id="modal-mentions" class="legal-modal" onclick="if(event.target===this)this.style.display='none'">
+  <div class="legal-modal-content">
+    <button class="legal-close" onclick="this.closest('.legal-modal').style.display='none'" aria-label="Fermer">&times;</button>
+
+    <h2>Mentions légales</h2>
+
+    <h3>Éditeur du site</h3>
+    <p>
+      Le site <strong>fannydefoort.fr</strong> est édité par :<br>
+      <strong>Fanny Defoort</strong><br>
+      Entrepreneur individuel (auto-entrepreneur)<br>
+      Siège : 1033 chemin d'Angoué, 65710 Campan<br>
+      SIRET : 828 979 997 00024<br>
+      TVA non applicable, art. 293 B du CGI
+    </p>
+    <p>Directrice de la publication : Fanny Defoort</p>
+    <p>Contact : contact@fannydefoort.fr — 06 13 18 34 73</p>
+
+    <h3>Hébergement</h3>
+    <p>
+      Le site est hébergé par <strong>OVH SAS</strong><br>
+      2 rue Kellermann, 59100 Roubaix, France<br>
+      <a href="https://www.ovhcloud.com" target="_blank" rel="noopener">www.ovhcloud.com</a><br>
+      Le nom de domaine est également enregistré auprès d'OVH SAS.
+    </p>
+
+    <h3>Conception du site</h3>
+    <p>
+      Site conçu et développé par <strong>Tom Klein — WebKlein</strong><br>
+      <a href="https://webklein.fr" target="_blank" rel="noopener">webklein.fr</a>
+    </p>
+
+    <h3>Propriété intellectuelle</h3>
+    <p>L'ensemble du contenu de ce site (textes, images, photographies, mise en page) est protégé par le droit de la propriété intellectuelle. La photographie du Pont Romain de Jaujac est reproduite avec l'aimable autorisation de son auteur, Simon Bugnon (<a href="https://simonbugnon.com" target="_blank" rel="noopener">simonbugnon.com</a>). Toute reproduction, représentation ou diffusion, en tout ou partie, du contenu de ce site est interdite sans l'autorisation écrite préalable de Fanny Defoort.</p>
+
+    <h3>Données personnelles</h3>
+    <p>Pour toute information relative à la collecte et au traitement de vos données personnelles, consultez la <a href="#politique-confidentialite" onclick="document.getElementById('modal-mentions').style.display='none';document.getElementById('modal-confidentialite').style.display='flex';return false;">Politique de confidentialité</a>.</p>
+    <p>Pour exercer vos droits (accès, rectification, effacement, opposition), contactez : contact@fannydefoort.fr</p>
+    <p>En cas de réclamation : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a></p>
+
+    <h3>Cookies</h3>
+    <p>Ce site n'utilise aucun cookie publicitaire ni outil de suivi tiers. Seuls des cookies strictement nécessaires au fonctionnement technique du site peuvent être utilisés. La carte interactive Google Maps intégrée à la page « Le cabinet » est fournie par Google et peut déposer ses propres cookies, soumis à la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité de Google</a>.</p>
+
+    <h3>Responsabilité</h3>
+    <p>Fanny Defoort s'efforce de fournir des informations aussi précises que possible. Toutefois, elle ne pourra être tenue responsable des omissions, inexactitudes ou carences dans la mise à jour de ces informations.</p>
+  </div>
+</div>
+
+<!-- ===== MODALE POLITIQUE DE CONFIDENTIALITÉ ===== -->
+<div id="modal-confidentialite" class="legal-modal" onclick="if(event.target===this)this.style.display='none'">
+  <div class="legal-modal-content">
+    <button class="legal-close" onclick="this.closest('.legal-modal').style.display='none'" aria-label="Fermer">&times;</button>
+
+    <h2>Politique de confidentialité</h2>
+    <p style="font-size:.85rem;opacity:.6">Dernière mise à jour : juillet 2026</p>
+
+    <h3>1. Responsable du traitement</h3>
+    <p>
+      <strong>Fanny Defoort</strong><br>
+      1033 chemin d'Angoué, 65710 Campan<br>
+      Contact : contact@fannydefoort.fr
+    </p>
+
+    <h3>2. Données collectées</h3>
+    <p><strong>Via le formulaire de contact :</strong></p>
+    <ul>
+      <li>Prénom et nom</li>
+      <li>Adresse email</li>
+      <li>Numéro de téléphone (si renseigné)</li>
+      <li>Objet de la demande et contenu du message</li>
+    </ul>
+    <p><strong>Données de navigation (collecte automatique) :</strong></p>
+    <ul>
+      <li>Adresse IP (journaux techniques de l'hébergeur)</li>
+      <li>Type de navigateur et système d'exploitation</li>
+      <li>Pages consultées et durée de visite</li>
+    </ul>
+
+    <h3>3. Finalités</h3>
+    <p>Les données collectées sont utilisées exclusivement pour répondre à vos demandes de contact et assurer le bon fonctionnement technique du site. Aucune utilisation commerciale, publicitaire ou de profilage. Les messages envoyés via le formulaire sont transmis par email à Fanny Defoort.</p>
+
+    <h3>4. Base légale</h3>
+    <ul>
+      <li><strong>Intérêt légitime</strong> pour les données de navigation (fonctionnement du site)</li>
+      <li><strong>Consentement</strong> pour les données transmises via le formulaire de contact</li>
+    </ul>
+
+    <h3>5. Destinataires</h3>
+    <p>Les données sont destinées uniquement à Fanny Defoort. Aucune transmission à des tiers, sauf obligation légale.</p>
+    <p>Prestataire technique : <strong>OVH SAS</strong> (hébergement du site et acheminement des emails), dont les serveurs sont situés en France.</p>
+
+    <h3>6. Durée de conservation</h3>
+    <ul>
+      <li>Données du formulaire : 12 mois maximum</li>
+      <li>Données de navigation : 1 an maximum (obligations légales)</li>
+    </ul>
+
+    <h3>7. Cookies</h3>
+    <p>Ce site n'utilise <strong>aucun cookie publicitaire, de suivi ou d'analyse comportementale</strong>. Seuls des cookies strictement nécessaires au fonctionnement technique peuvent être déposés (pas de consentement requis, conformément aux recommandations de la CNIL). La carte Google Maps intégrée à la page peut déposer des cookies tiers, soumis à la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité de Google</a>.</p>
+
+    <h3>8. Vos droits</h3>
+    <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong>Accès</strong> : obtenir une copie de vos données</li>
+      <li><strong>Rectification</strong> : corriger des données inexactes</li>
+      <li><strong>Effacement</strong> : demander la suppression</li>
+      <li><strong>Opposition</strong> : vous opposer au traitement</li>
+      <li><strong>Limitation</strong> : restreindre le traitement</li>
+      <li><strong>Portabilité</strong> : recevoir vos données dans un format structuré</li>
+    </ul>
+    <p>Pour exercer ces droits : <strong>contact@fannydefoort.fr</strong></p>
+    <p>Délai de réponse : un mois maximum.</p>
+
+    <h3>9. Réclamation</h3>
+    <p>En cas de différend, vous pouvez saisir la CNIL :<br>
+    <strong>Commission Nationale de l'Informatique et des Libertés</strong><br>
+    3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07<br>
+    <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a></p>
+  </div>
+</div>
+
+<!-- ===== JS FERMETURE MODALES (Escape) ===== -->
+<script>
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.legal-modal').forEach(function(m){m.style.display='none'})}});
 </script>
 </body>
 </html>
