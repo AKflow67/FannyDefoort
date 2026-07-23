@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fanny Defoort - Psychopraticienne EMDR-DSA · Bagnères-de-Bigorre</title>
-  <meta name="description" content="Psychopraticienne EMDR-DSA à Bagnères-de-Bigorre : traumas, Breathwork, hypnose, art-thérapie. Enfants et adultes. Cabinet près de Campan, Lourdes, Lannemezan.">
+  <meta name="description" content="Psychopraticienne EMDR-DSA à Bagnères-de-Bigorre : traumas, Breathwork, hypnose. Enfants et adultes. Cabinet près de Campan, Lourdes, Lannemezan.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://fannydefoort.fr/">
   <link rel="icon" type="image/png" href="favicon.png">
@@ -15,7 +15,7 @@
   <meta name="geo.position" content="43.0630;0.1470">
   <meta name="ICBM" content="43.0630, 0.1470">
   <meta property="og:title" content="Fanny Defoort - Psychopraticienne EMDR-DSA · Bagnères-de-Bigorre">
-  <meta property="og:description" content="Désensibilisation des traumas, Breathwork, hypnose, art-thérapie. Enfants et adultes. Cabinet à Bagnères-de-Bigorre, Hautes-Pyrénées.">
+  <meta property="og:description" content="Désensibilisation des traumas, Breathwork, hypnose. Enfants et adultes. Cabinet à Bagnères-de-Bigorre, Hautes-Pyrénées.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fannydefoort.fr/">
   <meta property="og:image" content="https://fannydefoort.fr/pont-fanny.webp">
@@ -25,7 +25,7 @@
   <meta property="og:site_name" content="Fanny Defoort">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Fanny Defoort - Psychopraticienne EMDR-DSA · Bagnères-de-Bigorre">
-  <meta name="twitter:description" content="Désensibilisation des traumas, Breathwork, hypnose, art-thérapie. Enfants et adultes.">
+  <meta name="twitter:description" content="Désensibilisation des traumas, Breathwork, hypnose. Enfants et adultes.">
   <meta name="twitter:image" content="https://fannydefoort.fr/pont-fanny.webp">
   <script type="application/ld+json">
   {
@@ -33,7 +33,7 @@
     "@type": "LocalBusiness",
     "@id": "https://fannydefoort.fr/#cabinet",
     "name": "Fanny Defoort - Psychopraticienne EMDR-DSA",
-    "description": "Psychopraticienne EMDR-DSA. Désensibilisation des traumas, Breathwork, hypnose, art-thérapie. Enfants et adultes.",
+    "description": "Psychopraticienne EMDR-DSA. Désensibilisation des traumas, Breathwork, hypnose. Enfants et adultes.",
     "address": { "@type": "PostalAddress", "streetAddress": "3 rue Soubies", "addressLocality": "Bagnères-de-Bigorre", "postalCode": "65200", "addressRegion": "Hautes-Pyrénées", "addressCountry": "FR" },
     "geo": { "@type": "GeoCoordinates", "latitude": 43.0630, "longitude": 0.1470 },
     "telephone": "+33613183473",
@@ -339,7 +339,7 @@
 
     /* ── SECTION EMDR ── */
     #emdr { background: var(--fog); padding: 7rem 0; }
-    .emdr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .emdr-grid { display: grid; grid-template-columns: 1fr 2.2fr; gap: 4rem; align-items: start; }
     .emdr-visual {
       aspect-ratio: 1/1;
       overflow: hidden;
@@ -436,11 +436,7 @@
     .hyp-item h4 { font-size: .82rem; font-weight: 600; margin-bottom: .4rem; color: var(--moss-dk); }
     .hyp-item p { font-size: .78rem; color: var(--mid); line-height: 1.65; }
 
-    /* ── ART-THERAPIE (mise en avant) ── */
-    #art { background: var(--sand); padding: 7rem 0; overflow: hidden; }
-    .art-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .art-inner .lbl { color: var(--clay-dk); }
-    .art-inner .bar { background: linear-gradient(90deg, var(--clay), var(--moss)); }
+    /* ── TAGS PRESTATIONS ── */
     .art-medias { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
     .art-tag {
       font-size: .68rem; font-weight: 600; letter-spacing: .08em;
@@ -450,19 +446,6 @@
       padding: .35rem .85rem;
       border-radius: 20px;
     }
-    .art-visual { aspect-ratio: 1; border-radius: 4px; overflow: hidden; }
-    .art-visual img { width: 100%; height: 100%; object-fit: cover; }
-    .art-quote {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      font-style: italic;
-      color: var(--clay-dk);
-      padding: 1.25rem 0 1.25rem 1.5rem;
-      border-left: 2px solid var(--clay);
-      margin: 2rem 0;
-      line-height: 1.65;
-    }
-
     /* ── QUI SUIS-JE ── */
     #qui { background: var(--sand-dk); padding: 7rem 0; }
     .qui-grid { display: grid; grid-template-columns: 2fr 3fr; gap: 5.5rem; align-items: start; }
@@ -547,7 +530,8 @@
       .nav-links { display: none; }
       .nav-tel { font-size: .78rem; padding: .4rem .75rem; }
       .page-crayon { display: none; }
-      .emdr-grid, .duo-grid, .art-inner, .qui-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .emdr-grid, .duo-grid, .qui-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .emdr-visual { max-width: 340px; margin: 0 auto; }
       .acc-grid, .hyp-points, .emdr-steps, .trauma-duo { grid-template-columns: 1fr; }
       .acc-card.wide { grid-column: 1; grid-template-columns: 1fr; }
       .foot-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -582,7 +566,6 @@
       <li><a href="#emdr">L'EMDR-DSA</a></li>
       <li><a href="#breathwork">Breathwork</a></li>
       <li><a href="#hypnose">Hypnose</a></li>
-      <li><a href="#art">Art-thérapie</a></li>
       <li><a href="#qui">Qui suis-je</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -622,7 +605,7 @@
     </h1>
     <p class="hero-sub">
       À Bagnères-de-Bigorre, j'accompagne enfants et adultes
-      dans la désensibilisation des traumas, le Breathwork et l'Art-thérapie.
+      dans la désensibilisation des traumas, le Breathwork et l'hypnose.
     </p>
   </div>
   <svg class="hero-wave" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -660,25 +643,6 @@
         <h3>Hypnose</h3>
         <p>Utilisée comme outil d'accès aux ressources profondes et de reconfiguration des schémas inconscients.</p>
         <span class="acc-tag">Individuel · Sur demande</span>
-      </a>
-
-      <a href="#art" class="acc-card wide r d1">
-        <div>
-          <div class="acc-icon"><svg viewBox="0 0 24 24"><path d="M12 19c-4.4 0-8-3.1-8-7 0-3.9 3.6-7 8-7 4.4 0 7 2.2 7 5 0 2-1.3 3-3 3h-1.5c-.8 0-1.5.7-1.5 1.5S13.7 16 14.5 16c.9 0 1.5.6 1.5 1.5C16 18.3 14.2 19 12 19z"/><circle cx="8.5" cy="11.5" r="1"/><circle cx="11" cy="8.5" r="1"/><circle cx="14" cy="9" r="1"/></svg></div>
-          <h3>Art-thérapie</h3>
-          <span class="acc-tag" style="margin-top:.5rem;display:block">Médias manuels · Ancrage · Intégration</span>
-        </div>
-        <div>
-          <p>L'art-thérapie peut venir compléter le travail thérapeutique par la création. Après avoir traversé quelque chose en séance, la main, le corps et la matière deviennent des relais d'intégration.</p>
-          <p style="font-size:.82rem;color:var(--mid);line-height:1.75">Dessiner, peindre, modeler l'argile, manipuler des marionnettes : bien plus que des exercices artistiques, ce sont des passages. Ce qui a été compris dans la tête et ressenti dans le corps vient se déposer et s'ancrer dans la matière.</p>
-          <div class="art-medias" style="margin-top:1rem">
-            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Dessin</span>
-            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Peinture</span>
-            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Argile</span>
-            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Marionnettes</span>
-            <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Médias manuels</span>
-          </div>
-        </div>
       </a>
 
     </div>
@@ -776,8 +740,10 @@
         <div class="bar r d2"></div>
         <p class="body-t r d2">Le Breathwork est une technique ancestrale de libération qui permet de se relier à son être profond.</p>
         <p class="body-t r d2">On utilise la respiration consciente en trois temps, comme porte d'entrée vers ce que le mental ne sait pas atteindre. Le souffle, amplifié et soutenu, ouvre un espace de lâcher-prise profond où les émotions retenues peuvent enfin circuler.</p>
-        <p class="body-t r d2">Sans parole, sans analyse : vous entrez dans un état modifié de conscience où c'est le corps qui fait le travail. Tensions physiques accumulées, émotions figées, charges anciennes : la respiration vient dénouer les blocages de manière efficace, à votre rythme.</p>
+        <p class="body-t r d2">Sans parole, sans analyse : vous entrez dans un état modifié de conscience où c'est le corps qui fait le travail. Tensions physiques accumulées, émotions figées, charges anciennes : la respiration vient dénouer les blocages de manière efficace, à votre rythme. Le processus est soutenu par la musique.</p>
+        <p class="body-t r d2">Dès la première séance, cet état modifié de conscience peut amener la personne dans des zones beaucoup plus subtiles de son être. Chaque personne est unique et va être amenée à vivre des choses différentes : avoir des clairs-ressentis, voir des images, recevoir des messages ou encore entrer en lien sensible avec son environnement, la Terre, ses ancêtres, les plantes, les animaux, la Vie... Cette méthode peut aussi amener les personnes à développer leur créativité, retrouver de la clarté d'esprit ou encore développer des dons soupçonnés ou insoupçonnés.</p>
         <p class="body-t r d3">Je facilite des sessions de groupe régulières ainsi que des séances individuelles à domicile.</p>
+        <p class="body-t r d3">Pour en savoir plus sur le déroulement d'une séance, <a href="#contact" style="color:var(--moss-dk);text-decoration:underline">n'hésitez pas à me contacter</a>.</p>
         <div class="art-medias r d3" style="margin-top:1.5rem">
           <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--fog)">Groupe</span>
           <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--fog)">Individuel</span>
@@ -816,35 +782,6 @@
   </div>
 </section>
 
-<!-- ART-THÉRAPIE EN PROFONDEUR (section sombre) -->
-<section id="art">
-  <div class="wrap">
-    <div class="art-inner">
-      <div>
-        <span class="lbl r">Art-thérapie · L'art comme passage</span>
-        <h2 class="h2 r d1">Enraciner<br><em>ce qui a changé</em></h2>
-        <div class="bar r d2"></div>
-        <p class="body-t r d2">Le travail thérapeutique peut rester suspendu dans le mental si on ne lui donne pas un corps, une forme, une matière. L'art-thérapie est bien plus qu'une illustration de ce qui a été dit : c'est un passage par lui-même.</p>
-        <div class="art-quote r d2">
-          "Ce qui a été transformé se grave dans la matière. Le corps tient ce que l'esprit a traversé."
-        </div>
-        <p class="body-t r d3">Dessiner, modeler, peindre : ces gestes simples activent d'autres voies neurologiques, touchent d'autres mémoires. Ils permettent à la transformation de s'ancrer vraiment, dans le corps, dans le réel.</p>
-        <div class="art-medias r d3">
-          <span class="art-tag">Dessin</span>
-          <span class="art-tag">Peinture</span>
-          <span class="art-tag">Argile</span>
-          <span class="art-tag">Marionnettes</span>
-          <span class="art-tag">Médias manuels</span>
-          <span class="art-tag">Enracinement</span>
-        </div>
-      </div>
-      <div class="art-visual r sr">
-        <img src="peinture-pot-fanny.webp" alt="Art-thérapie - intégration par la création">
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- QUI SUIS-JE -->
 <section id="qui">
   <div class="wrap">
@@ -870,6 +807,15 @@
           <li>Formation en Communication Non Violente de Marshall Rosenberg (Muriel Kalfala)</li>
           <li>Diplôme de psychogénéalogie (Betty Tutrice)</li>
         </ul>
+        <details class="fold r d3" style="margin-top:2rem">
+          <summary>Mon histoire</summary>
+          <div class="fold-body">
+            <p>Je suis née d'une famille où prendre soin est important : prendre soin de l'éducation, de l'environnement, des autres et de soi. Je me suis toujours sentie libre et soutenue dans mes choix. Aujourd'hui, je puise beaucoup de mes ressources dans mon enfance, dans cette ambiance familiale chaleureuse, un cadre scolaire épanouissant et la nature vivante toujours présente.</p>
+            <p>Très jeune, je voulais devenir thérapeute, car j'ai toujours aimé écouter l'autre activement, essayer de le comprendre et proposer des idées pour avancer. Je suis passée par le théâtre, avec notamment cette approche de la créativité qui permet de se transformer et d'aider : l'art-thérapie, le théâtre forum... Je me suis ensuite naturellement dirigée vers le travail et la formation autour de la petite enfance, car je me questionnais : qu'est-ce qu'un être humain ? Comment aider cet adulte à dépasser ses blocages, et d'où viennent-ils ? Qui est cet enfant devant moi ? Comment l'accompagner dans son développement, comment l'aider à s'exprimer, tout en lui donnant l'espace et la liberté pour faire grandir ses dons ?</p>
+            <p>J'ai toujours écouté mon cœur, et j'ai suivi le fil rouge de ma vie, entre ma transformation intérieure et l'accompagnement des autres, enfants ou adultes, en étant portée par cette joie profonde d'aider les personnes à vivre des prises de conscience, des réparations et des transformations.</p>
+            <p>Aujourd'hui, je suis psychopraticienne et je m'engage à vous accueillir dans un espace bienveillant, avec une écoute subtile et une boîte à outils dans laquelle je pioche pour m'adapter à vos besoins, à votre rythme, et répondre efficacement à votre envie d'avancer. Ceci dans le respect de la déontologie, comme le secret professionnel. Chaque personne a ses propres ressources, et je suis là pour que vous puissiez les recontacter, afin de retrouver l'équilibre en vous, durablement.</p>
+          </div>
+        </details>
       </div>
     </div>
   </div>
@@ -929,7 +875,6 @@
               <option>Séance EMDR-DSA (enfant)</option>
               <option>Session Breathwork individuelle</option>
               <option>Session Breathwork en groupe</option>
-              <option>Art-thérapie</option>
               <option>Hypnose</option>
               <option>Renseignements généraux</option>
             </select>
@@ -978,7 +923,7 @@
       <div>
         <div class="f-name">Fanny Defoort</div>
         <div class="f-sub">Psychopraticienne EMDR-DSA · Bagnères-de-Bigorre</div>
-        <p class="f-desc">EMDR, Breathwork, Art-thérapie, Hypnose.<br>Enfants et adultes. Cabinet à Bagnères-de-Bigorre.</p>
+        <p class="f-desc">EMDR, Breathwork, Hypnose.<br>Enfants et adultes. Cabinet à Bagnères-de-Bigorre.</p>
       </div>
       <div class="fc">
         <h4>Navigation</h4>
@@ -987,7 +932,6 @@
           <li><a href="#emdr">L'EMDR-DSA</a></li>
           <li><a href="#breathwork">Breathwork</a></li>
           <li><a href="#hypnose">Hypnose</a></li>
-          <li><a href="#art">Art-thérapie</a></li>
           <li><a href="#qui">Qui suis-je</a></li>
           <li><a href="#contact">Contact &amp; RDV</a></li>
         </ul>
