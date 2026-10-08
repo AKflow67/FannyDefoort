@@ -525,6 +525,7 @@
       .form-row { grid-template-columns: 1fr; }
     }
   </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="decbf6cc-667f-4334-8723-b027420ce22e"></script>
 </head>
 <body>
 
@@ -551,9 +552,9 @@
       <li><a href="#hypnose">Hypnose</a></li>
       <li><a href="#breathwork">Breathwork</a></li>
       <li><a href="#qui">Qui suis-je</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" data-umami-event="cta-contact">Contact</a></li>
     </ul>
-    <a class="nav-tel" href="tel:+33613183473">
+    <a class="nav-tel" href="tel:+33613183473" data-umami-event="appel-telephone">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.5 11.5 0 0 0 3.6.6 1 1 0 0 1 1 1V19a1 1 0 0 1-1 1A17 17 0 0 1 4 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>
       06 13 18 34 73
     </a>
@@ -562,7 +563,7 @@
 </nav>
 
 <!-- BOUTON FLOTTANT RDV -->
-<a href="#contact" id="fab-rdv" aria-label="Prendre rendez-vous">
+<a href="#contact" id="fab-rdv" aria-label="Prendre rendez-vous" data-umami-event="cta-contact">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
   </svg>
@@ -767,7 +768,7 @@
         <p class="body-t r d2">Sans parole, sans analyse : vous entrez dans un état modifié de conscience où c'est le corps qui fait le travail. Tensions physiques accumulées, émotions figées, charges anciennes : la respiration vient dénouer les blocages de manière efficace, à votre rythme. Le processus est soutenu par la musique.</p>
         <p class="body-t r d2">Dès la première séance, cet état modifié de conscience peut amener la personne dans des zones beaucoup plus subtiles de son être. Chaque personne est unique et va être amenée à vivre des choses différentes : avoir des clairs-ressentis, voir des images, recevoir des messages ou encore entrer en lien sensible avec son environnement, la Terre, ses ancêtres, les plantes, les animaux, la Vie... Cette méthode peut aussi amener les personnes à développer leur créativité, retrouver de la clarté d'esprit ou encore développer des dons soupçonnés ou insoupçonnés.</p>
         <p class="body-t r d3">Je facilite des sessions de groupe régulières ainsi que des séances individuelles à domicile.</p>
-        <p class="body-t r d3">Pour en savoir plus sur le déroulement d'une séance, <a href="#contact" style="color:var(--moss-dk);text-decoration:underline">n'hésitez pas à me contacter</a>.</p>
+        <p class="body-t r d3">Pour en savoir plus sur le déroulement d'une séance, <a href="#contact" style="color:var(--moss-dk);text-decoration:underline" data-umami-event="cta-contact">n'hésitez pas à me contacter</a>.</p>
         <div class="art-medias r d3" style="margin-top:1.5rem">
           <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Groupe</span>
           <span class="art-tag" style="color:var(--moss-dk);border-color:var(--line);background:var(--sand)">Individuel</span>
@@ -852,7 +853,7 @@
         <!-- Appel direct, mis en avant -->
         <div class="call-box r d2">
           <span class="call-lbl">Le plus simple : appelez directement</span>
-          <a class="call-num" href="tel:+33613183473">
+          <a class="call-num" href="tel:+33613183473" data-umami-event="appel-telephone">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.5 11.5 0 0 0 3.6.6 1 1 0 0 1 1 1V19a1 1 0 0 1-1 1A17 17 0 0 1 4 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>
             06 13 18 34 73
           </a>
@@ -886,7 +887,7 @@
           <div style="display:none" aria-hidden="true">
             <input type="text" name="website" tabindex="-1" autocomplete="off">
           </div>
-          <button type="submit" class="btn btn-moss" style="width:100%;margin-top:.5rem">Envoyer mon message</button>
+          <button type="submit" data-umami-event="envoi-formulaire" class="btn btn-moss" style="width:100%;margin-top:.5rem">Envoyer mon message</button>
         </form>
         <div id="form-success" style="display:none;padding:1.5rem 0 0;text-align:center">
           <p style="font-family:var(--serif);font-size:1.15rem;color:var(--moss-dk)">Merci ! Votre message a bien été envoyé.<br><span style="font-size:.85rem;font-family:var(--sans);color:var(--mid)">Je vous réponds personnellement sous 48h.</span></p>
@@ -936,7 +937,7 @@
           <li><a href="#hypnose">Hypnose</a></li>
           <li><a href="#breathwork">Breathwork</a></li>
           <li><a href="#qui">Qui suis-je</a></li>
-          <li><a href="#contact">Contact &amp; RDV</a></li>
+          <li><a href="#contact" data-umami-event="cta-contact">Contact &amp; RDV</a></li>
         </ul>
       </div>
       <div class="fc">
@@ -1165,7 +1166,7 @@
     <h3>Conception du site</h3>
     <p>
       Site conçu et développé par <strong>Tom Klein — WebKlein</strong><br>
-      <a href="https://webklein.fr" target="_blank" rel="noopener">webklein.fr</a>
+      <a href="https://webklein.fr" target="_blank" rel="noopener" data-umami-event="clic-webklein">webklein.fr</a>
     </p>
 
     <h3>Propriété intellectuelle</h3>
@@ -1178,6 +1179,7 @@
 
     <h3>Cookies</h3>
     <p>Ce site n'utilise aucun cookie publicitaire ni outil de suivi tiers. Seuls des cookies strictement nécessaires au fonctionnement technique du site peuvent être utilisés. La carte interactive Google Maps intégrée à la page « Le cabinet » est fournie par Google et peut déposer ses propres cookies, soumis à la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité de Google</a>.</p>
+      <p>Mesure d'audience : le site utilise <strong>Umami</strong> (Umami Software, serveurs dans l'Union européenne) pour compter les visites et les clics de façon anonyme. Umami ne dépose aucun cookie, ne suit pas les visiteurs d'un site à l'autre et ne conserve pas d'adresse IP identifiable.</p>
 
     <h3>Responsabilité</h3>
     <p>Fanny Defoort s'efforce de fournir des informations aussi précises que possible. Toutefois, elle ne pourra être tenue responsable des omissions, inexactitudes ou carences dans la mise à jour de ces informations.</p>
@@ -1235,6 +1237,7 @@
 
     <h3>7. Cookies</h3>
     <p>Ce site n'utilise <strong>aucun cookie publicitaire, de suivi ou d'analyse comportementale</strong>. Seuls des cookies strictement nécessaires au fonctionnement technique peuvent être déposés (pas de consentement requis, conformément aux recommandations de la CNIL). La carte Google Maps intégrée à la page peut déposer des cookies tiers, soumis à la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité de Google</a>.</p>
+      <p>Mesure d'audience : le site utilise <strong>Umami</strong> (Umami Software, serveurs dans l'Union européenne) pour compter les visites et les clics de façon anonyme. Umami ne dépose aucun cookie, ne suit pas les visiteurs d'un site à l'autre et ne conserve pas d'adresse IP identifiable.</p>
 
     <h3>8. Vos droits</h3>
     <p>Conformément au RGPD, vous disposez des droits suivants :</p>
